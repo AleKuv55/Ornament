@@ -15,5 +15,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func buttonDidTap(_ sender: Any) {
+        let viewController = ChooseDoctorTypeViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    
 }
 
