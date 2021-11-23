@@ -148,43 +148,6 @@
                                                     <constraint firstItem="iBO-DX-eZA" firstAttribute="leading" secondItem="rLb-0H-1rV" secondAttribute="leading" constant="36" id="suP-2p-5Er"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-UJ-hCo" userLabel="ViewDoctor">
-                                                <rect key="frame" x="40" y="185" width="335" height="141"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Терапевт" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK9-dN-6xy">
-                                                        <rect key="frame" x="32" y="32" width="105" height="28"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="28" id="Fgy-ti-Nuv"/>
-                                                            <constraint firstAttribute="width" constant="105" id="Jth-Tq-xur"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WJ-Zj-IsC">
-                                                        <rect key="frame" x="36" y="64" width="113" height="20"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="основной врач">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.78896399257945371" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" metaFont="system" size="16"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
-                                                <color key="tintColor" systemColor="systemGreenColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="IK9-dN-6xy" firstAttribute="top" secondItem="bgr-UJ-hCo" secondAttribute="top" constant="32" id="4Gl-oS-V2C"/>
-                                                    <constraint firstItem="1WJ-Zj-IsC" firstAttribute="leading" secondItem="bgr-UJ-hCo" secondAttribute="leading" constant="36" id="9WH-E7-OYL"/>
-                                                    <constraint firstItem="1WJ-Zj-IsC" firstAttribute="top" secondItem="IK9-dN-6xy" secondAttribute="bottom" constant="4" id="GbE-Xo-egD"/>
-                                                    <constraint firstItem="IK9-dN-6xy" firstAttribute="leading" secondItem="bgr-UJ-hCo" secondAttribute="leading" constant="32" id="fGj-9i-KFp"/>
-                                                    <constraint firstItem="1WJ-Zj-IsC" firstAttribute="top" secondItem="IK9-dN-6xy" secondAttribute="bottom" constant="4" id="wq2-Z6-1ne"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Aw-Qk-dGq" userLabel="ViewDoctor">
                                                 <rect key="frame" x="40" y="978" width="335" height="141"/>
                                                 <subviews>
@@ -262,6 +225,43 @@
                                                     <constraint firstAttribute="trailing" secondItem="BZf-NL-W4a" secondAttribute="trailing" constant="32" id="kuK-dO-iad"/>
                                                     <constraint firstAttribute="height" constant="141" id="oxI-Qg-c7E"/>
                                                     <constraint firstItem="AkW-RM-BGP" firstAttribute="top" secondItem="BZf-NL-W4a" secondAttribute="bottom" constant="4" id="pt3-wL-biH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-UJ-hCo" userLabel="ViewDoctor">
+                                                <rect key="frame" x="40" y="152" width="335" height="141"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Терапевт" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK9-dN-6xy">
+                                                        <rect key="frame" x="32" y="32" width="105" height="28"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="28" id="Fgy-ti-Nuv"/>
+                                                            <constraint firstAttribute="width" constant="105" id="Jth-Tq-xur"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WJ-Zj-IsC">
+                                                        <rect key="frame" x="36" y="64" width="113" height="20"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="основной врач">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.78896399257945371" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" metaFont="system" size="16"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="IK9-dN-6xy" firstAttribute="top" secondItem="bgr-UJ-hCo" secondAttribute="top" constant="32" id="4Gl-oS-V2C"/>
+                                                    <constraint firstItem="1WJ-Zj-IsC" firstAttribute="leading" secondItem="bgr-UJ-hCo" secondAttribute="leading" constant="36" id="9WH-E7-OYL"/>
+                                                    <constraint firstItem="1WJ-Zj-IsC" firstAttribute="top" secondItem="IK9-dN-6xy" secondAttribute="bottom" constant="4" id="GbE-Xo-egD"/>
+                                                    <constraint firstItem="IK9-dN-6xy" firstAttribute="leading" secondItem="bgr-UJ-hCo" secondAttribute="leading" constant="32" id="fGj-9i-KFp"/>
+                                                    <constraint firstItem="1WJ-Zj-IsC" firstAttribute="top" secondItem="IK9-dN-6xy" secondAttribute="bottom" constant="4" id="wq2-Z6-1ne"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
