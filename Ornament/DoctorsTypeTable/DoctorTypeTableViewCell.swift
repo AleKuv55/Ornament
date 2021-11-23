@@ -49,7 +49,7 @@ class DoctorTypeTableViewCell: UITableViewCell {
     func update(type:String) {
         self.doctorTypeLabel.text = type
     }
-    
+    //
     func setupConstraints() {
     [
         viewContainer.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
