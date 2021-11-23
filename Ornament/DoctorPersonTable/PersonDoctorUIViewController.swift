@@ -47,6 +47,7 @@ extension PersonDoctorUIViewController: UITableViewDataSource {
         5
     }
     
+    
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "newIdentifier", for: indexPath) as! PersonDoctorTableViewCell
 //    cell.update(data: CellDataModel (title: "title for path \(indexPath)", isCompleted: false))
