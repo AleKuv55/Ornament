@@ -22,7 +22,7 @@ class PersonDoctorUIView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
-        backgroundColor = .gray
+//        backgroundColor = .gray
     }
     
     required init?(coder: NSCoder) {
@@ -36,10 +36,11 @@ class PersonDoctorUIView: UIView {
         self.subviews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
+        UpdateConstraints()
 
 
     }
-    override func updateConstraints(){
+    func UpdateConstraints(){
         [
              headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor),
              headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 88),
@@ -49,7 +50,7 @@ class PersonDoctorUIView: UIView {
              tableView.bottomAnchor.constraint (equalTo: self.bottomAnchor)
         ].forEach { $0.isActive = true }
         
-         super.updateConstraints ()
+//         super.updateConstraints ()
     }
 
     /*

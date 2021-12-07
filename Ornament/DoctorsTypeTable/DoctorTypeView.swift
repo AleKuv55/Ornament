@@ -13,7 +13,7 @@ class DoctorTypeView: UIView {
         let label = UILabel()
         label.text = "Записаться"
         label.textColor = .black
-        label.backgroundColor = .gray
+//        label.backgroundColor = .gray
         label.textAlignment = .center
         return label
     }()
@@ -42,8 +42,8 @@ class DoctorTypeView: UIView {
     }
     override func updateConstraints(){
         [
-             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor),
-             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 88),
+             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 140),
+             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
              tableView.topAnchor.constraint (equalTo: headerLabel.bottomAnchor, constant: 24),
              tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
              tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),

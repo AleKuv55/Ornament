@@ -26,7 +26,7 @@ class DoctorTypeTableViewCell: UITableViewCell {
         
     private let viewContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         return view
     }()
 
@@ -37,10 +37,18 @@ class DoctorTypeTableViewCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
+    private let extraInfoLabel: UILabel = {
+        let label = UILabel()
+        label.text = "основной врач"
+//        label.font = UIFont.systemFont(ofSize: 17)
+        label.textColor = .lightGray
+        return label
+    }()
     
     private func addSubviews () {
         contentView.addSubview(viewContainer)
         contentView.addSubview(doctorTypeLabel)
+        contentView.addSubview(extraInfoLabel)
 
         self.contentView.subviews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -58,11 +66,19 @@ class DoctorTypeTableViewCell: UITableViewCell {
 //        viewContainer.heightAnchor.constraint(equalToConstant: 141),
 
         viewContainer.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+//        viewContainer.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -64),
+
 
         doctorTypeLabel.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 32),
         doctorTypeLabel.topAnchor.constraint (equalTo: viewContainer.topAnchor, constant: 32),
         doctorTypeLabel.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
-        doctorTypeLabel.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor)
+        doctorTypeLabel.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -64),
+
+        
+        extraInfoLabel.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 32),
+        extraInfoLabel.topAnchor.constraint (equalTo: doctorTypeLabel.bottomAnchor, constant: 4),
+        extraInfoLabel.trailingAnchor.constraint(equalTo: doctorTypeLabel.trailingAnchor),
+//        extraInfoLabel.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor)
 
         
 //        doctorTypeLabel.leadingAnchor.constraint (equalTo: viewContainer.topAnchor, 32),

@@ -9,8 +9,17 @@ import UIKit
 
 class ChooseDoctorTypeViewController: UIViewController {
 
-    let list: Array<String> = ["Терапевт","Хирург","Лор"]
+    let list: [String] = ["Терапевт","Хирург","Лор","Офтальмолог", "Диетолог", "Психолог"]
 
+    let PersonDoctor1: PersonDoctorDataModel = PersonDoctorDataModel(name: "Андрей Болконcкий", imagePath: "Bolkonskiy", rating: "1", isBusy: false)
+    let PersonDoctor2: PersonDoctorDataModel = PersonDoctorDataModel(name: "Оксимирон", imagePath: "Image", rating: "2", isBusy: true)
+    let PersonDoctor3: PersonDoctorDataModel = PersonDoctorDataModel(name: "Дмитрий Путьков", imagePath: "Dima", rating: "5", isBusy: false)
+    let PersonDoctor4: PersonDoctorDataModel = PersonDoctorDataModel(name: "Орландо Блум", imagePath: "Orlando", rating: "4", isBusy: false)
+    let PersonDoctor5: PersonDoctorDataModel = PersonDoctorDataModel(name: "Андрей Болконcкий", imagePath: "Image", rating: "3", isBusy: false)
+    
+    var doctorNameList: [[PersonDoctorDataModel]] = []
+//        [[PersonDoctor1, PersonDoctor2], [PersonDoctor3], [PersonDoctor4]]
+    
     private let doctorTypeTableView = DoctorTypeView()
     
     override func loadView() {
@@ -21,6 +30,8 @@ class ChooseDoctorTypeViewController: UIViewController {
         super.viewDidLoad ()
         self.title = "Выберите врача"
 
+//        doctorNameList.append()
+        doctorNameList.append(contentsOf: [[PersonDoctor1, PersonDoctor2], [PersonDoctor3], [PersonDoctor4], [PersonDoctor5], [PersonDoctor1],[PersonDoctor2]] )
         doctorTypeTableView.tableView.sectionHeaderHeight = UITableView.automaticDimension
         doctorTypeTableView.tableView.rowHeight = UITableView.automaticDimension
         doctorTypeTableView.tableView.register(DoctorTypeTableViewCell.self, forCellReuseIdentifier:"reuseIdentifier")
@@ -74,7 +85,8 @@ extension ChooseDoctorTypeViewController: UITableViewDataSource {
   }
     
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let viewController = PersonDoctorUIViewController()
+
+    let viewController = PersonDoctorUIViewController(doctorList: doctorNameList[indexPath.section])
     self.navigationController?.pushViewController(viewController, animated: true)
 
     // передать InitViewController эту логику???? тогда нужно, чтобы здесь активировалось событие
