@@ -68,6 +68,7 @@ class TwoColumnViewController: UIViewController {
         let nib = UINib(nibName: DummyCell.reuseIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: DummyCell.reuseIdentifier)
         view.addSubview(collectionView)
+        collectionView.isScrollEnabled = false
     }
     
     private func configureDataSource() {

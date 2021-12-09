@@ -13,9 +13,6 @@
 		0474D4EA276257A800C0A1B3 /* AllCheckUpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4E9276257A800C0A1B3 /* AllCheckUpsViewController.swift */; };
 		0474D4EC27625ADD00C0A1B3 /* CheckUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4EB27625ADD00C0A1B3 /* CheckUpCell.swift */; };
 		0474D4EE27625B1D00C0A1B3 /* CheckUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D4ED27625B1D00C0A1B3 /* CheckUpCell.xib */; };
-		04BBBD23274AC46D00A059F2 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBD22274AC46D00A059F2 /* CustomCollectionViewController.swift */; };
-		04BBBD25274B023F00A059F2 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBD24274B023F00A059F2 /* MyCollectionViewCell.swift */; };
-		04BBBD27274BF90F00A059F2 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBD26274BF90F00A059F2 /* CustomFlowLayout.swift */; };
 		04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0388E273C373B00E90CBC /* AppDelegate.swift */; };
 		04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F03890273C373B00E90CBC /* SceneDelegate.swift */; };
 		04F03896273C373B00E90CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F03894273C373B00E90CBC /* Main.storyboard */; };
@@ -30,9 +27,6 @@
 		0474D4E9276257A800C0A1B3 /* AllCheckUpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCheckUpsViewController.swift; sourceTree = "<group>"; };
 		0474D4EB27625ADD00C0A1B3 /* CheckUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpCell.swift; sourceTree = "<group>"; };
 		0474D4ED27625B1D00C0A1B3 /* CheckUpCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckUpCell.xib; sourceTree = "<group>"; };
-		04BBBD22274AC46D00A059F2 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
-		04BBBD24274B023F00A059F2 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
-		04BBBD26274BF90F00A059F2 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		04F0388B273C373B00E90CBC /* Ornament.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ornament.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F0388E273C373B00E90CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F03890273C373B00E90CBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,24 +67,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		04BBBD20274AC3EC00A059F2 /* TableViewFeatures */ = {
-			isa = PBXGroup;
-			children = (
-				04BBBD21274AC3FA00A059F2 /* CustomCollectionViewController */,
-			);
-			path = TableViewFeatures;
-			sourceTree = "<group>";
-		};
-		04BBBD21274AC3FA00A059F2 /* CustomCollectionViewController */ = {
-			isa = PBXGroup;
-			children = (
-				04BBBD22274AC46D00A059F2 /* CustomCollectionViewController.swift */,
-				04BBBD24274B023F00A059F2 /* MyCollectionViewCell.swift */,
-				04BBBD26274BF90F00A059F2 /* CustomFlowLayout.swift */,
-			);
-			path = CustomCollectionViewController;
-			sourceTree = "<group>";
-		};
 		04F03882273C373B00E90CBC = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +88,6 @@
 			children = (
 				0474D4E8276256CD00C0A1B3 /* ViewControllers */,
 				0474D4E32762246800C0A1B3 /* Cell */,
-				04BBBD20274AC3EC00A059F2 /* TableViewFeatures */,
 				04F0388E273C373B00E90CBC /* AppDelegate.swift */,
 				04F03890273C373B00E90CBC /* SceneDelegate.swift */,
 				04F03894273C373B00E90CBC /* Main.storyboard */,
@@ -196,12 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0474D4EA276257A800C0A1B3 /* AllCheckUpsViewController.swift in Sources */,
-				04BBBD25274B023F00A059F2 /* MyCollectionViewCell.swift in Sources */,
 				0474D4E62762248400C0A1B3 /* DummyCell.swift in Sources */,
 				0474D4EC27625ADD00C0A1B3 /* CheckUpCell.swift in Sources */,
-				04BBBD23274AC46D00A059F2 /* CustomCollectionViewController.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
-				04BBBD27274BF90F00A059F2 /* CustomFlowLayout.swift in Sources */,
 				04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */,
 				0474D4DF276220EF00C0A1B3 /* TwoColumnViewController.swift in Sources */,
 			);

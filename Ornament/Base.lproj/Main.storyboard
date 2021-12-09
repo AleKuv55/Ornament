@@ -7,7 +7,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -102,56 +101,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSU-6M-QKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="868" y="-1129"/>
-        </scene>
-        <!--Custom Collection View Controller-->
-        <scene sceneID="9Nh-6B-bSo">
-            <objects>
-                <collectionViewController id="zDA-gj-Z9r" customClass="CustomCollectionViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qM0-XJ-cii">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="guF-80-3Fk">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="fZB-5d-gfZ" customClass="MyCollectionViewCell" customModule="Ornament" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8KC-7o-K28">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocf-B2-bvV">
-                                            <rect key="frame" x="43" y="53.666666666666657" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Ocf-B2-bvV" firstAttribute="centerX" secondItem="8KC-7o-K28" secondAttribute="centerX" id="RNI-HO-1UK"/>
-                                        <constraint firstItem="Ocf-B2-bvV" firstAttribute="centerY" secondItem="8KC-7o-K28" secondAttribute="centerY" id="i6O-QQ-aiT"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="128" height="128"/>
-                                <connections>
-                                    <outlet property="checkUpLabel" destination="Ocf-B2-bvV" id="mq0-6e-Niw"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="zDA-gj-Z9r" id="uqJ-k9-5ep"/>
-                            <outlet property="delegate" destination="zDA-gj-Z9r" id="Vy8-m9-Rbo"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t8B-7t-tqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="83" y="0.0"/>
         </scene>
         <!--All Check Ups View Controller-->
         <scene sceneID="sjE-uu-GMJ">
