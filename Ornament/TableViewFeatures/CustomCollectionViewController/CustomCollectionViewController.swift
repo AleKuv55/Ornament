@@ -11,10 +11,7 @@ private let reuseIdentifier = "Cell"
 
 class CustomCollectionViewController: UICollectionViewController {
     
-    let CATEGORY = [
-        "🔥Популярные",
-        "🦠Covid-19"
-        ]
+    
     
     let items = [
         "Ежегодная проверка",

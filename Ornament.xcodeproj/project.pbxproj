@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0474D4DB2761F9C800C0A1B3 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4DA2761F9C800C0A1B3 /* CategoryCollectionViewController.swift */; };
+		0474D4DF276220EF00C0A1B3 /* TwoColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */; };
+		0474D4E62762248400C0A1B3 /* DummyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4E42762248400C0A1B3 /* DummyCell.swift */; };
+		0474D4E72762248400C0A1B3 /* DummyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D4E52762248400C0A1B3 /* DummyCell.xib */; };
 		04BBBD23274AC46D00A059F2 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBD22274AC46D00A059F2 /* CustomCollectionViewController.swift */; };
 		04BBBD25274B023F00A059F2 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBD24274B023F00A059F2 /* MyCollectionViewCell.swift */; };
 		04BBBD27274BF90F00A059F2 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBBD26274BF90F00A059F2 /* CustomFlowLayout.swift */; };
 		04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0388E273C373B00E90CBC /* AppDelegate.swift */; };
 		04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F03890273C373B00E90CBC /* SceneDelegate.swift */; };
-		04F03893273C373B00E90CBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F03892273C373B00E90CBC /* ViewController.swift */; };
 		04F03896273C373B00E90CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F03894273C373B00E90CBC /* Main.storyboard */; };
 		04F03898273C373E00E90CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F03897273C373E00E90CBC /* Assets.xcassets */; };
 		04F0389B273C373E00E90CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F03899273C373E00E90CBC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0474D4DA2761F9C800C0A1B3 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnViewController.swift; sourceTree = "<group>"; };
+		0474D4E42762248400C0A1B3 /* DummyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyCell.swift; path = ../../../../Desktop/Cell/DummyCell.swift; sourceTree = "<group>"; };
+		0474D4E52762248400C0A1B3 /* DummyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DummyCell.xib; path = ../../../../Desktop/Cell/DummyCell.xib; sourceTree = "<group>"; };
 		04BBBD22274AC46D00A059F2 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
 		04BBBD24274B023F00A059F2 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		04BBBD26274BF90F00A059F2 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		04F0388B273C373B00E90CBC /* Ornament.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ornament.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F0388E273C373B00E90CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F03890273C373B00E90CBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04F03892273C373B00E90CBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04F03895273C373B00E90CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F03897273C373E00E90CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F0389A273C373E00E90CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,17 +49,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		049DCDCE2761F23600A9CF02 /* CategoryCollectionViewController */ = {
+		0474D4D92761F9AF00C0A1B3 /* CategoryCollection */ = {
 			isa = PBXGroup;
 			children = (
+				0474D4DA2761F9C800C0A1B3 /* CategoryCollectionViewController.swift */,
+				0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */,
 			);
-			path = CategoryCollectionViewController;
+			path = CategoryCollection;
+			sourceTree = "<group>";
+		};
+		0474D4E32762246800C0A1B3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0474D4E42762248400C0A1B3 /* DummyCell.swift */,
+				0474D4E52762248400C0A1B3 /* DummyCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		04BBBD20274AC3EC00A059F2 /* TableViewFeatures */ = {
 			isa = PBXGroup;
 			children = (
-				049DCDCE2761F23600A9CF02 /* CategoryCollectionViewController */,
+				0474D4D92761F9AF00C0A1B3 /* CategoryCollection */,
 				04BBBD21274AC3FA00A059F2 /* CustomCollectionViewController */,
 			);
 			path = TableViewFeatures;
@@ -88,10 +105,10 @@
 		04F0388D273C373B00E90CBC /* Ornament */ = {
 			isa = PBXGroup;
 			children = (
+				0474D4E32762246800C0A1B3 /* Cell */,
 				04BBBD20274AC3EC00A059F2 /* TableViewFeatures */,
 				04F0388E273C373B00E90CBC /* AppDelegate.swift */,
 				04F03890273C373B00E90CBC /* SceneDelegate.swift */,
-				04F03892273C373B00E90CBC /* ViewController.swift */,
 				04F03894273C373B00E90CBC /* Main.storyboard */,
 				04F03897273C373E00E90CBC /* Assets.xcassets */,
 				04F03899273C373E00E90CBC /* LaunchScreen.storyboard */,
@@ -159,6 +176,7 @@
 			files = (
 				04F0389B273C373E00E90CBC /* LaunchScreen.storyboard in Resources */,
 				04F03898273C373E00E90CBC /* Assets.xcassets in Resources */,
+				0474D4E72762248400C0A1B3 /* DummyCell.xib in Resources */,
 				04F03896273C373B00E90CBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,11 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BBBD25274B023F00A059F2 /* MyCollectionViewCell.swift in Sources */,
-				04F03893273C373B00E90CBC /* ViewController.swift in Sources */,
+				0474D4E62762248400C0A1B3 /* DummyCell.swift in Sources */,
 				04BBBD23274AC46D00A059F2 /* CustomCollectionViewController.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
 				04BBBD27274BF90F00A059F2 /* CustomFlowLayout.swift in Sources */,
 				04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */,
+				0474D4DB2761F9C800C0A1B3 /* CategoryCollectionViewController.swift in Sources */,
+				0474D4DF276220EF00C0A1B3 /* TwoColumnViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ornament/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ios.Ornament;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -341,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ornament/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ios.Ornament;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
