@@ -22,6 +22,20 @@ class ChooseDoctorTypeViewController: UIViewController {
     
     private let doctorTypeTableView = DoctorTypeView()
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Settings")!, tag: 0)
+//        UIImage.add
+//        tabBarItem = icon1
+        tabBarItem.image = UIImage(named: "Settings")
+        tabBarItem.selectedImage = UIImage.add
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         self.view = doctorTypeTableView
         
