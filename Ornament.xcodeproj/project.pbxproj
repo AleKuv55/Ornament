@@ -43,9 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049DCDCE2761F23600A9CF02 /* CategoryCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryCollectionViewController;
+			sourceTree = "<group>";
+		};
 		04BBBD20274AC3EC00A059F2 /* TableViewFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				049DCDCE2761F23600A9CF02 /* CategoryCollectionViewController */,
 				04BBBD21274AC3FA00A059F2 /* CustomCollectionViewController */,
 			);
 			path = TableViewFeatures;

@@ -9,22 +9,20 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
     
-//    @IBOutlet weak var checkUpLabel: UILabel!
-    
-    let checkUpLabel = UILabel()
+    var myLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        checkUpLabel.numberOfLines = 0
+        myLabel.numberOfLines = 0
         backgroundColor = UIColor.systemGray5
-        contentView.addSubview(checkUpLabel)
+        contentView.addSubview(myLabel)
 
-        checkUpLabel.translatesAutoresizingMaskIntoConstraints = false
-        checkUpLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor).isActive = true
-        checkUpLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor).isActive = true
-        checkUpLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor).isActive = true
-        checkUpLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor).isActive = true
+        myLabel.translatesAutoresizingMaskIntoConstraints = false
+        myLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor).isActive = true
+        myLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor).isActive = true
+        myLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor).isActive = true
+        myLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor).isActive = true
         
     }
 
@@ -34,7 +32,7 @@ class MyCollectionViewCell: UICollectionViewCell {
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         layoutIfNeeded()
-//        checkUpLabel.preferredMaxLayoutWidth = checkUpLabel.bounds.size.width
+//        myLabel.preferredMaxLayoutWidth = myLabel.bounds.size.width
 //        layoutAttributes.bounds.size.height = contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         return layoutAttributes
     }

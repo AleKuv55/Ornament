@@ -11,6 +11,11 @@ private let reuseIdentifier = "Cell"
 
 class CustomCollectionViewController: UICollectionViewController {
     
+    let CATEGORY = [
+        "🔥Популярные",
+        "🦠Covid-19"
+        ]
+    
     let items = [
         "Ежегодная проверка",
         "Постковидный чекап",
@@ -38,6 +43,7 @@ class CustomCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         collectionView?.collectionViewLayout = columnLayout
         collectionView?.contentInsetAdjustmentBehavior = .always
         collectionView?.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -55,15 +61,11 @@ class CustomCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MyCollectionViewCell
         cell.layer.cornerRadius = 7.0
-        cell.checkUpLabel.text = items[indexPath.row]
+        cell.myLabel.text = items[indexPath.row]
         return cell
     }
     
     
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        collectionView?.collectionViewLayout.invalidateLayout()
-//        super.viewWillTransition(to: size, with: coordinator)
-//    }
 }
 
 extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout {
