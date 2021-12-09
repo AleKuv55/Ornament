@@ -69,6 +69,7 @@ class TwoColumnViewController: UIViewController {
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DummyCell.reuseIdentifier, for: indexPath) as? DummyCell else { fatalError("Cannot create the cell") }
             
+            cell.layer.cornerRadius = 7.0
             cell.textLabel.text = "\(identifier)"
             
             return cell
