@@ -50,7 +50,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCm-7F-c5m">
                                 <rect key="frame" x="0.0" y="224" width="414" height="565"/>
                                 <connections>
-                                    <segue destination="zDA-gj-Z9r" kind="embed" id="HcI-aC-ZTv"/>
+                                    <segue destination="GFZ-tH-70u" kind="embed" id="omg-Cm-hfg"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-F3-GoJ">
@@ -101,14 +101,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSU-6M-QKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="-927"/>
+            <point key="canvasLocation" x="868" y="-1129"/>
         </scene>
         <!--Custom Collection View Controller-->
         <scene sceneID="9Nh-6B-bSo">
             <objects>
                 <collectionViewController id="zDA-gj-Z9r" customClass="CustomCollectionViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qM0-XJ-cii">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="guF-80-3Fk">
@@ -151,7 +151,22 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8B-7t-tqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="-97"/>
+            <point key="canvasLocation" x="83" y="0.0"/>
+        </scene>
+        <!--All Check Ups View Controller-->
+        <scene sceneID="sjE-uu-GMJ">
+            <objects>
+                <viewController id="GFZ-tH-70u" customClass="AllCheckUpsViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzn-UT-58L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WBT-gq-JBf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58b-G9-06M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-110"/>
         </scene>
     </scenes>
     <resources>

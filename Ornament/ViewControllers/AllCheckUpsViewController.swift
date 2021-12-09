@@ -1,5 +1,5 @@
 //
-//  TwoColumnViewController.swift
+//  AllCheckUpsViewController.swift
 //  Ornament
 //
 //  Created by Anastasia on 09.12.2021.
@@ -7,12 +7,23 @@
 
 import UIKit
 
-class TwoColumnViewController: UIViewController {
+class AllCheckUpsViewController: UIViewController {
     
-//    let items = [
-//        "🔥Популярные",
-//        "🦠Covid-19"
-//        ]
+    let items = [
+        "Ежегодная проверка",
+        "Постковидный чекап",
+        "Спотрсменам",
+        "Диетологический чекап",
+        "Планирование беременности",
+        "ПЦР-тест на коронавирус",
+        "Тест на антитела",
+        "Экспресс-тест на коронавирус на дому",
+        "Микроэлементы и витамины",
+        "Проверка диабета",
+        "Щитовидная железа",
+        "Суставы",
+        "Система пищеварения"
+    ]
     
     enum Section {
         case main
@@ -23,31 +34,32 @@ class TwoColumnViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Two Column"
+        navigationItem.title = "All Check-up"
         configureHierarchy()
         configureDataSource()
 
     }
     
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return items.count
-//    }
-    
     private func createLayout() -> UICollectionViewLayout {
-        let spacing: CGFloat = 10
-        let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
+        let spacing: CGFloat = 10
+
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .absolute(170),
+            heightDimension: .absolute(120))
+
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(40))
+            heightDimension: .absolute(120))
+
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
         group.interItemSpacing = .fixed(spacing)
-        
+
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        // leading - boarders of group, trailing - between items
+        section.contentInsets = .init(top: 10, leading: 24, bottom: 10, trailing: 24)
         section.interGroupSpacing = spacing
         
         let layout = UICollectionViewCompositionalLayout(section: section)
@@ -58,8 +70,8 @@ class TwoColumnViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground
-        let nib = UINib(nibName: DummyCell.reuseIdentifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: DummyCell.reuseIdentifier)
+        let nib = UINib(nibName: CheckUpCell.reuseIdentifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: CheckUpCell.reuseIdentifier)
         view.addSubview(collectionView)
     }
     
@@ -67,17 +79,19 @@ class TwoColumnViewController: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
             
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DummyCell.reuseIdentifier, for: indexPath) as? DummyCell else { fatalError("Cannot create the cell") }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CheckUpCell.reuseIdentifier, for: indexPath) as? CheckUpCell else { fatalError("Cannot create the cell") }
             
             cell.layer.cornerRadius = 7.0
-            cell.textLabel.text = "\(identifier)"
+            cell.textLabel.text = self.items[indexPath.row]
             
             return cell
         }
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Array(0..<2))
+        snapshot.appendItems(Array(0..<items.count))
         dataSource.apply(snapshot, animatingDifferences: false)
+
     }
+    
 }
