@@ -24,7 +24,7 @@ class ChooseDoctorTypeViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Settings")!, tag: 0)
+//        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Settings"), tag: 0)
 //        UIImage.add
 //        tabBarItem = icon1
         tabBarItem.image = UIImage(named: "Settings")
@@ -39,6 +39,7 @@ class ChooseDoctorTypeViewController: UIViewController {
     override func loadView() {
         self.view = doctorTypeTableView
         
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad ()
@@ -51,6 +52,7 @@ class ChooseDoctorTypeViewController: UIViewController {
         doctorTypeTableView.tableView.register(DoctorTypeTableViewCell.self, forCellReuseIdentifier:"reuseIdentifier")
         doctorTypeTableView.tableView.delegate = self
         doctorTypeTableView.tableView.dataSource = self
+        doctorTypeTableView.tableView.allowsSelection = true
     }
     private var sectionNumber: Int = 3
     let cellSpacingHeight: CGFloat = 5
@@ -93,16 +95,25 @@ extension ChooseDoctorTypeViewController: UITableViewDataSource {
     cell.layer.borderColor = UIColor.black.cgColor
     cell.layer.borderWidth = 1
     cell.layer.cornerRadius = 8
+    cell.selectionStyle = .gray
+
+
 //    cell.clipsToBounds = true
 
     return cell
   }
-    
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! DoctorTypeTableViewCell
+    tableView.cellForRow(at: indexPath)?.backgroundView?.backgroundColor = .gray
+//    print(indexPath)
+//    cell.backgroundColor = UIColor.red
+
+//    tableView.deselectRow(at: indexPath, animated: false)
     let viewController = PersonDoctorUIViewController(doctorList: doctorNameList[indexPath.section])
     self.navigationController?.pushViewController(viewController, animated: true)
 
+    
     // передать InitViewController эту логику???? тогда нужно, чтобы здесь активировалось событие
     
     

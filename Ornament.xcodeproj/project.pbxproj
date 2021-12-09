@@ -15,6 +15,8 @@
 		45332F2E274B012400A1CCF6 /* PersonDoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45332F2D274B012400A1CCF6 /* PersonDoctorTableViewCell.swift */; };
 		454A7E1C275F9206001440D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E1B275F9206001440D8 /* TabBarController.swift */; };
 		454A7E1F275F96C1001440D8 /* SettingnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E1E275F96C1001440D8 /* SettingnsViewController.swift */; };
+		454A7E2227624AC7001440D8 /* DoctorTimeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E2127624AC7001440D8 /* DoctorTimeCollectionViewController.swift */; };
+		454A7E2427624B60001440D8 /* DoctorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E2327624B60001440D8 /* DoctorInfoViewController.swift */; };
 		454BE62927412BB700C42C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BE62827412BB700C42C92 /* AppDelegate.swift */; };
 		454BE62B27412BB700C42C92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BE62A27412BB700C42C92 /* SceneDelegate.swift */; };
 		454BE62D27412BB700C42C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BE62C27412BB700C42C92 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		45332F2D274B012400A1CCF6 /* PersonDoctorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDoctorTableViewCell.swift; sourceTree = "<group>"; };
 		454A7E1B275F9206001440D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		454A7E1E275F96C1001440D8 /* SettingnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingnsViewController.swift; sourceTree = "<group>"; };
+		454A7E2127624AC7001440D8 /* DoctorTimeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTimeCollectionViewController.swift; sourceTree = "<group>"; };
+		454A7E2327624B60001440D8 /* DoctorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoViewController.swift; sourceTree = "<group>"; };
 		454BE62527412BB700C42C92 /* Ornament.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ornament.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		454BE62827412BB700C42C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		454BE62A27412BB700C42C92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 			path = GeneralView;
 			sourceTree = "<group>";
 		};
+		454A7E2027624AA9001440D8 /* DoctorTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				454A7E2127624AC7001440D8 /* DoctorTimeCollectionViewController.swift */,
+				454A7E2327624B60001440D8 /* DoctorInfoViewController.swift */,
+			);
+			path = DoctorTimeView;
+			sourceTree = "<group>";
+		};
 		454BE61C27412BB700C42C92 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		454BE62727412BB700C42C92 /* Ornament */ = {
 			isa = PBXGroup;
 			children = (
+				454A7E2027624AA9001440D8 /* DoctorTimeView */,
 				454A7E1D275F96A2001440D8 /* GeneralView */,
 				45332F28274AEF0400A1CCF6 /* DoctorPersonTable */,
 				45332F21274AD17200A1CCF6 /* DoctorsTypeTable */,
@@ -185,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454A7E2427624B60001440D8 /* DoctorInfoViewController.swift in Sources */,
 				45332F2E274B012400A1CCF6 /* PersonDoctorTableViewCell.swift in Sources */,
 				45332F23274AD74100A1CCF6 /* ChooseDoctorTypeViewController.swift in Sources */,
 				45332F25274AD80400A1CCF6 /* DoctorTypeView.swift in Sources */,
@@ -195,6 +210,7 @@
 				45332F2A274AEF6600A1CCF6 /* PersonDoctorUIViewController.swift in Sources */,
 				454BE62927412BB700C42C92 /* AppDelegate.swift in Sources */,
 				45332F2C274AFFB200A1CCF6 /* PersonDoctorUIView.swift in Sources */,
+				454A7E2227624AC7001440D8 /* DoctorTimeCollectionViewController.swift in Sources */,
 				454BE62B27412BB700C42C92 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
