@@ -42,7 +42,7 @@ class TwoColumnViewController: UIViewController {
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(44))
+            heightDimension: .absolute(40))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
         group.interItemSpacing = .fixed(spacing)
         
@@ -76,7 +76,7 @@ class TwoColumnViewController: UIViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Array(0..<100))
+        snapshot.appendItems(Array(0..<2))
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

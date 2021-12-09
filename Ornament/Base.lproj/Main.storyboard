@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-IB-SIX">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="789" width="414" height="73"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="Главная" image="homekit" catalog="system" id="M8o-MW-PZ6"/>
@@ -48,30 +48,33 @@
                                 </items>
                             </tabBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCm-7F-c5m">
-                                <rect key="frame" x="0.0" y="358" width="414" height="431"/>
+                                <rect key="frame" x="0.0" y="224" width="414" height="565"/>
                                 <connections>
                                     <segue destination="zDA-gj-Z9r" kind="embed" id="HcI-aC-ZTv"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-F3-GoJ">
-                                <rect key="frame" x="0.0" y="140" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="60"/>
+                                <connections>
+                                    <segue destination="RIg-8v-zFy" kind="embed" id="Ltf-fg-wDt"/>
+                                </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v0w-lI-Kol"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RoJ-IB-SIX" firstAttribute="bottom" secondItem="v0w-lI-Kol" secondAttribute="bottom" id="3Op-o2-DEx"/>
+                            <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="GLF-F3-GoJ" secondAttribute="bottom" constant="24" id="5Th-QI-c1O"/>
                             <constraint firstItem="GLF-F3-GoJ" firstAttribute="trailing" secondItem="HCm-7F-c5m" secondAttribute="trailing" id="64b-bm-6Xu"/>
-                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="top" secondItem="HCm-7F-c5m" secondAttribute="bottom" constant="24" id="F85-xN-ced"/>
+                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="top" secondItem="HCm-7F-c5m" secondAttribute="bottom" id="F85-xN-ced"/>
                             <constraint firstItem="RoJ-IB-SIX" firstAttribute="leading" secondItem="dOH-mh-XdM" secondAttribute="leading" id="Glz-ec-vMF"/>
                             <constraint firstItem="RoJ-IB-SIX" firstAttribute="trailing" secondItem="HCm-7F-c5m" secondAttribute="trailing" id="M4K-IO-t7x"/>
                             <constraint firstItem="RoJ-IB-SIX" firstAttribute="leading" secondItem="HCm-7F-c5m" secondAttribute="leading" id="Mvl-yD-OEH"/>
-                            <constraint firstAttribute="bottom" secondItem="GLF-F3-GoJ" secondAttribute="bottom" constant="606" id="PIy-6G-3yd"/>
                             <constraint firstItem="GLF-F3-GoJ" firstAttribute="leading" secondItem="HCm-7F-c5m" secondAttribute="leading" id="Rd0-Yn-nGN"/>
                             <constraint firstItem="GLF-F3-GoJ" firstAttribute="top" secondItem="v0w-lI-Kol" secondAttribute="top" id="T4A-MI-W3d"/>
+                            <constraint firstAttribute="bottom" secondItem="GLF-F3-GoJ" secondAttribute="bottom" constant="696" id="hzk-5D-Uln"/>
                             <constraint firstAttribute="bottom" secondItem="HCm-7F-c5m" secondAttribute="bottom" constant="107" id="lWc-7h-50f"/>
                             <constraint firstItem="HCm-7F-c5m" firstAttribute="centerX" secondItem="dOH-mh-XdM" secondAttribute="centerX" id="ljb-G4-gEM"/>
-                            <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="GLF-F3-GoJ" secondAttribute="bottom" constant="68" id="uHY-mJ-Uhz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Чекапы" id="QF2-4k-QSJ">
@@ -84,12 +87,12 @@
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="-719.19642857142856"/>
         </scene>
-        <!--Category Collection View Controller-->
+        <!--Two Column View Controller-->
         <scene sceneID="ZJw-7x-aUu">
             <objects>
-                <viewController id="RIg-8v-zFy" customClass="CategoryCollectionViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RIg-8v-zFy" customClass="TwoColumnViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yXL-Wu-Nss">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Vr3-vx-fKT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,7 +108,7 @@
             <objects>
                 <collectionViewController id="zDA-gj-Z9r" customClass="CustomCollectionViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qM0-XJ-cii">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="guF-80-3Fk">
