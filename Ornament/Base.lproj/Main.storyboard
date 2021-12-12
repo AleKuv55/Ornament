@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qj5-RY-9yU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qj5-RY-9yU">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,33 +17,50 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="RMV-7q-Dnb" kind="relationship" relationship="rootViewController" id="WPk-iP-QFp"/>
+                        <segue destination="csv-WO-i35" kind="relationship" relationship="rootViewController" id="ihe-YP-zCA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGY-qb-Rbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-949" y="-720"/>
+            <point key="canvasLocation" x="-1523" y="-719"/>
+        </scene>
+        <!--Init View Controller-->
+        <scene sceneID="dh1-rH-Jy0">
+            <objects>
+                <viewController id="csv-WO-i35" customClass="InitViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EJe-89-GAS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYl-dj-n9O">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTab:" destination="csv-WO-i35" eventType="touchUpInside" id="KPV-OK-0jX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QjZ-Qh-WEc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wYl-dj-n9O" firstAttribute="centerY" secondItem="EJe-89-GAS" secondAttribute="centerY" id="PN4-pO-wZD"/>
+                            <constraint firstItem="wYl-dj-n9O" firstAttribute="centerX" secondItem="EJe-89-GAS" secondAttribute="centerX" id="byw-td-em6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LsO-aa-Ufc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWA-sw-Bnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706" y="-719"/>
         </scene>
         <!--First check up-->
         <scene sceneID="whF-4G-XYf">
             <objects>
-                <viewController title="First check up" id="RMV-7q-Dnb" customClass="ViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstCheckUp" title="First check up" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RMV-7q-Dnb" customClass="FirstCheckUpViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dOH-mh-XdM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-IB-SIX">
-                                <rect key="frame" x="0.0" y="789" width="414" height="73"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Главная" image="homekit" catalog="system" id="M8o-MW-PZ6"/>
-                                    <tabBarItem title="Чекап" id="1fH-uM-kGm">
-                                        <imageReference key="image" image="checkmark.circle" catalog="system"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Рецепты" image="highlighter" catalog="system" id="4gP-a3-6GS"/>
-                                    <tabBarItem title="Профиль" image="person.fill" catalog="system" id="LOA-W4-LC7"/>
-                                </items>
-                            </tabBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCm-7F-c5m">
                                 <rect key="frame" x="0.0" y="224" width="414" height="565"/>
                                 <connections>
@@ -53,7 +68,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-F3-GoJ">
-                                <rect key="frame" x="0.0" y="140" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="156"/>
                                 <connections>
                                     <segue destination="RIg-8v-zFy" kind="embed" id="Ltf-fg-wDt"/>
                                 </connections>
@@ -62,18 +77,14 @@
                         <viewLayoutGuide key="safeArea" id="v0w-lI-Kol"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="bottom" secondItem="v0w-lI-Kol" secondAttribute="bottom" id="3Op-o2-DEx"/>
                             <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="GLF-F3-GoJ" secondAttribute="bottom" constant="24" id="5Th-QI-c1O"/>
                             <constraint firstItem="GLF-F3-GoJ" firstAttribute="trailing" secondItem="HCm-7F-c5m" secondAttribute="trailing" id="64b-bm-6Xu"/>
-                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="top" secondItem="HCm-7F-c5m" secondAttribute="bottom" id="F85-xN-ced"/>
-                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="leading" secondItem="dOH-mh-XdM" secondAttribute="leading" id="Glz-ec-vMF"/>
-                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="trailing" secondItem="HCm-7F-c5m" secondAttribute="trailing" id="M4K-IO-t7x"/>
-                            <constraint firstItem="RoJ-IB-SIX" firstAttribute="leading" secondItem="HCm-7F-c5m" secondAttribute="leading" id="Mvl-yD-OEH"/>
                             <constraint firstItem="GLF-F3-GoJ" firstAttribute="leading" secondItem="HCm-7F-c5m" secondAttribute="leading" id="Rd0-Yn-nGN"/>
                             <constraint firstItem="GLF-F3-GoJ" firstAttribute="top" secondItem="v0w-lI-Kol" secondAttribute="top" id="T4A-MI-W3d"/>
                             <constraint firstAttribute="bottom" secondItem="GLF-F3-GoJ" secondAttribute="bottom" constant="696" id="hzk-5D-Uln"/>
                             <constraint firstAttribute="bottom" secondItem="HCm-7F-c5m" secondAttribute="bottom" constant="107" id="lWc-7h-50f"/>
                             <constraint firstItem="HCm-7F-c5m" firstAttribute="centerX" secondItem="dOH-mh-XdM" secondAttribute="centerX" id="ljb-G4-gEM"/>
+                            <constraint firstItem="GLF-F3-GoJ" firstAttribute="leading" secondItem="v0w-lI-Kol" secondAttribute="leading" id="wgX-mb-zFc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Чекапы" id="QF2-4k-QSJ">
@@ -84,14 +95,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJX-rF-xEZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.608695652173921" y="-719.19642857142856"/>
+            <point key="canvasLocation" x="83" y="-719"/>
         </scene>
         <!--Two Column View Controller-->
         <scene sceneID="ZJw-7x-aUu">
             <objects>
                 <viewController id="RIg-8v-zFy" customClass="TwoColumnViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yXL-Wu-Nss">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Vr3-vx-fKT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -100,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSU-6M-QKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="-1129"/>
+            <point key="canvasLocation" x="867" y="-968"/>
         </scene>
         <!--All Check Ups View Controller-->
         <scene sceneID="sjE-uu-GMJ">
@@ -115,15 +126,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58b-G9-06M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="-110"/>
+            <point key="canvasLocation" x="867" y="-608"/>
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
-        <image name="highlighter" catalog="system" width="128" height="119"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

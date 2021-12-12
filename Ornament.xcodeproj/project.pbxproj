@@ -18,6 +18,18 @@
 		04F03896273C373B00E90CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F03894273C373B00E90CBC /* Main.storyboard */; };
 		04F03898273C373E00E90CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F03897273C373E00E90CBC /* Assets.xcassets */; };
 		04F0389B273C373E00E90CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F03899273C373E00E90CBC /* LaunchScreen.storyboard */; };
+		451AC8EF276286E4007D664D /* PersonDoctorUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8EE276286E4007D664D /* PersonDoctorUIView.swift */; };
+		451AC8F0276286E4007D664D /* PersonDoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8ED276286E4007D664D /* PersonDoctorTableViewCell.swift */; };
+		451AC8F1276286E4007D664D /* PersonDoctorUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8EC276286E4007D664D /* PersonDoctorUIViewController.swift */; };
+		451AC8F5276286EB007D664D /* ChooseDoctorTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8F2276286EB007D664D /* ChooseDoctorTypeViewController.swift */; };
+		451AC8F6276286EB007D664D /* DoctorTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8F3276286EB007D664D /* DoctorTypeTableViewCell.swift */; };
+		451AC8F7276286EB007D664D /* DoctorTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8F4276286EB007D664D /* DoctorTypeView.swift */; };
+		451AC8FA276286F1007D664D /* DoctorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8F9276286F1007D664D /* DoctorInfoViewController.swift */; };
+		451AC8FB276286F1007D664D /* DoctorTimeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8F8276286F0007D664D /* DoctorTimeCollectionViewController.swift */; };
+		451AC8FD276286F5007D664D /* SettingnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8FC276286F5007D664D /* SettingnsViewController.swift */; };
+		451AC8FF27628B68007D664D /* FirstCheckUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8FE27628B68007D664D /* FirstCheckUpViewController.swift */; };
+		454A7E26276284D5001440D8 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E25276284D5001440D8 /* InitViewController.swift */; };
+		454A7E2827628553001440D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E2727628553001440D8 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +46,18 @@
 		04F03897273C373E00E90CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F0389A273C373E00E90CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F0389C273C373E00E90CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451AC8EC276286E4007D664D /* PersonDoctorUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDoctorUIViewController.swift; sourceTree = "<group>"; };
+		451AC8ED276286E4007D664D /* PersonDoctorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDoctorTableViewCell.swift; sourceTree = "<group>"; };
+		451AC8EE276286E4007D664D /* PersonDoctorUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDoctorUIView.swift; sourceTree = "<group>"; };
+		451AC8F2276286EB007D664D /* ChooseDoctorTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDoctorTypeViewController.swift; sourceTree = "<group>"; };
+		451AC8F3276286EB007D664D /* DoctorTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTypeTableViewCell.swift; sourceTree = "<group>"; };
+		451AC8F4276286EB007D664D /* DoctorTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTypeView.swift; sourceTree = "<group>"; };
+		451AC8F8276286F0007D664D /* DoctorTimeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTimeCollectionViewController.swift; sourceTree = "<group>"; };
+		451AC8F9276286F1007D664D /* DoctorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoViewController.swift; sourceTree = "<group>"; };
+		451AC8FC276286F5007D664D /* SettingnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingnsViewController.swift; sourceTree = "<group>"; };
+		451AC8FE27628B68007D664D /* FirstCheckUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCheckUpViewController.swift; sourceTree = "<group>"; };
+		454A7E25276284D5001440D8 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		454A7E2727628553001440D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +71,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0474D4E32762246800C0A1B3 /* Cell */ = {
+		0474D4E32762246800C0A1B3 /* CellCheckUp */ = {
 			isa = PBXGroup;
 			children = (
 				0474D4E42762248400C0A1B3 /* DummyCell.swift */,
@@ -55,16 +79,17 @@
 				0474D4EB27625ADD00C0A1B3 /* CheckUpCell.swift */,
 				0474D4ED27625B1D00C0A1B3 /* CheckUpCell.xib */,
 			);
-			path = Cell;
+			path = CellCheckUp;
 			sourceTree = "<group>";
 		};
-		0474D4E8276256CD00C0A1B3 /* ViewControllers */ = {
+		0474D4E8276256CD00C0A1B3 /* CheckUpViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				451AC8FE27628B68007D664D /* FirstCheckUpViewController.swift */,
 				0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */,
 				0474D4E9276257A800C0A1B3 /* AllCheckUpsViewController.swift */,
 			);
-			path = ViewControllers;
+			path = CheckUpViewControllers;
 			sourceTree = "<group>";
 		};
 		04F03882273C373B00E90CBC = {
@@ -86,8 +111,12 @@
 		04F0388D273C373B00E90CBC /* Ornament */ = {
 			isa = PBXGroup;
 			children = (
-				0474D4E8276256CD00C0A1B3 /* ViewControllers */,
-				0474D4E32762246800C0A1B3 /* Cell */,
+				452598BD2765FA4E00FB1450 /* DoctorInfoViewContorller */,
+				452598BC2765FA1000FB1450 /* DoctorTypeList */,
+				452598BB2765F9E400FB1450 /* DoctorPersonList */,
+				0474D4E8276256CD00C0A1B3 /* CheckUpViewControllers */,
+				0474D4E32762246800C0A1B3 /* CellCheckUp */,
+				452598BE2765FA7700FB1450 /* GeneralViewControllers */,
 				04F0388E273C373B00E90CBC /* AppDelegate.swift */,
 				04F03890273C373B00E90CBC /* SceneDelegate.swift */,
 				04F03894273C373B00E90CBC /* Main.storyboard */,
@@ -96,6 +125,45 @@
 				04F0389C273C373E00E90CBC /* Info.plist */,
 			);
 			path = Ornament;
+			sourceTree = "<group>";
+		};
+		452598BB2765F9E400FB1450 /* DoctorPersonList */ = {
+			isa = PBXGroup;
+			children = (
+				451AC8ED276286E4007D664D /* PersonDoctorTableViewCell.swift */,
+				451AC8EE276286E4007D664D /* PersonDoctorUIView.swift */,
+				451AC8EC276286E4007D664D /* PersonDoctorUIViewController.swift */,
+			);
+			path = DoctorPersonList;
+			sourceTree = "<group>";
+		};
+		452598BC2765FA1000FB1450 /* DoctorTypeList */ = {
+			isa = PBXGroup;
+			children = (
+				451AC8F2276286EB007D664D /* ChooseDoctorTypeViewController.swift */,
+				451AC8F3276286EB007D664D /* DoctorTypeTableViewCell.swift */,
+				451AC8F4276286EB007D664D /* DoctorTypeView.swift */,
+			);
+			path = DoctorTypeList;
+			sourceTree = "<group>";
+		};
+		452598BD2765FA4E00FB1450 /* DoctorInfoViewContorller */ = {
+			isa = PBXGroup;
+			children = (
+				451AC8F9276286F1007D664D /* DoctorInfoViewController.swift */,
+				451AC8F8276286F0007D664D /* DoctorTimeCollectionViewController.swift */,
+			);
+			path = DoctorInfoViewContorller;
+			sourceTree = "<group>";
+		};
+		452598BE2765FA7700FB1450 /* GeneralViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				454A7E25276284D5001440D8 /* InitViewController.swift */,
+				454A7E2727628553001440D8 /* TabBarController.swift */,
+				451AC8FC276286F5007D664D /* SettingnsViewController.swift */,
+			);
+			path = GeneralViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +238,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451AC8EF276286E4007D664D /* PersonDoctorUIView.swift in Sources */,
 				0474D4EA276257A800C0A1B3 /* AllCheckUpsViewController.swift in Sources */,
+				451AC8F1276286E4007D664D /* PersonDoctorUIViewController.swift in Sources */,
+				454A7E2827628553001440D8 /* TabBarController.swift in Sources */,
+				451AC8F0276286E4007D664D /* PersonDoctorTableViewCell.swift in Sources */,
 				0474D4E62762248400C0A1B3 /* DummyCell.swift in Sources */,
 				0474D4EC27625ADD00C0A1B3 /* CheckUpCell.swift in Sources */,
+				451AC8FA276286F1007D664D /* DoctorInfoViewController.swift in Sources */,
+				451AC8FB276286F1007D664D /* DoctorTimeCollectionViewController.swift in Sources */,
+				451AC8F6276286EB007D664D /* DoctorTypeTableViewCell.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
+				451AC8F5276286EB007D664D /* ChooseDoctorTypeViewController.swift in Sources */,
+				451AC8FF27628B68007D664D /* FirstCheckUpViewController.swift in Sources */,
+				454A7E26276284D5001440D8 /* InitViewController.swift in Sources */,
+				451AC8F7276286EB007D664D /* DoctorTypeView.swift in Sources */,
 				04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */,
 				0474D4DF276220EF00C0A1B3 /* TwoColumnViewController.swift in Sources */,
+				451AC8FD276286F5007D664D /* SettingnsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
