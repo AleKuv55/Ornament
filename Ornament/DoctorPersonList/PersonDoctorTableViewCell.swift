@@ -82,6 +82,7 @@ class PersonDoctorTableViewCell: UITableViewCell {
         self.ratingLabel.text = dataModel.rating
     }
     
+    
     func setupConstraints() {
     [
         viewContainer.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),

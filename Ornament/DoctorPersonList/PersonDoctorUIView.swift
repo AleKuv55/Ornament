@@ -12,7 +12,9 @@ class PersonDoctorUIView: UIView {
         let label = UILabel()
         label.text = "Свободные врачи"
         label.textColor = .black
-        label.backgroundColor = .gray
+        label.font = label.font.withSize(25)
+//        label.font.
+        //        label.backgroundColor = .none
         label.textAlignment = .center
         return label
     }()
@@ -22,7 +24,6 @@ class PersonDoctorUIView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
-//        backgroundColor = .gray
     }
     
     required init?(coder: NSCoder) {
@@ -42,11 +43,15 @@ class PersonDoctorUIView: UIView {
     }
     func UpdateConstraints(){
         [
-             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor),
-             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 88),
-             tableView.topAnchor.constraint (equalTo: headerLabel.bottomAnchor, constant: 24),
-             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor),
+            headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            headerLabel.trailingAnchor.constraint (equalTo: self.trailingAnchor),
+            headerLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 148),
+//             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor),
+//             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 88),
+             tableView.topAnchor.constraint (equalTo: headerLabel.bottomAnchor, constant: 0),
+             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
              tableView.bottomAnchor.constraint (equalTo: self.bottomAnchor)
         ].forEach { $0.isActive = true }
         

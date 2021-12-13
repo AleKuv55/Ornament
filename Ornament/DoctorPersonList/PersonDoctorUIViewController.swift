@@ -33,7 +33,7 @@ class PersonDoctorUIViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Просмотрите врачей"
+//        self.title = "Просмотрите врачей"
         
         personDoctorTableView.tableView.rowHeight = UITableView.automaticDimension
         personDoctorTableView.tableView.sectionHeaderHeight = UITableView.automaticDimension
@@ -76,8 +76,16 @@ extension PersonDoctorUIViewController: UITableViewDataSource {
   }
     
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    let viewController = PersonDoctorUIViewController(doctorList: doctorNameList[indexPath.section])
-//    self.navigationController?.pushViewController(viewController, animated: true)
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+//    let viewController = storyboard.instantiateViewController(withIdentifier: "DoctorInfo2") as! DoctorInfo2ViewController
+
+    let viewController = storyboard.instantiateViewController(identifier: "DoctorInfo2",
+                                                              creator:
+                                                                { coder in return DoctorInfo2ViewController(coder: coder, doctor: self.doctors[indexPath.section])})
+//    storyboard.instantiateViewController(identifier: <#T##String#>, creator: T##((NSCoder) -> ViewController?)?##((NSCoder) -> ViewController?)?##(NSCoder) -> ViewController?)
+
+        self.navigationController?.pushViewController(viewController, animated: true)
   }
   }
 

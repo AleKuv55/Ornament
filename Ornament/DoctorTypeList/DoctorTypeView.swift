@@ -13,8 +13,9 @@ class DoctorTypeView: UIView {
         let label = UILabel()
         label.text = "Записаться"
         label.textColor = .black
-//        label.backgroundColor = .gray
+        label.font = label.font.withSize(20)
         label.textAlignment = .center
+    
         return label
     }()
 
@@ -42,11 +43,13 @@ class DoctorTypeView: UIView {
     }
     override func updateConstraints(){
         [
-             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 140),
+             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 0),
              headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-             tableView.topAnchor.constraint (equalTo: headerLabel.bottomAnchor, constant: 24),
-             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            headerLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 148),
+             tableView.topAnchor.constraint (equalTo: headerLabel.bottomAnchor, constant: 0),
+             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
              tableView.bottomAnchor.constraint (equalTo: self.bottomAnchor)
         ].forEach { $0.isActive = true }
         

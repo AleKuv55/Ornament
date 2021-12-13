@@ -30,6 +30,8 @@
 		451AC8FF27628B68007D664D /* FirstCheckUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AC8FE27628B68007D664D /* FirstCheckUpViewController.swift */; };
 		454A7E26276284D5001440D8 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E25276284D5001440D8 /* InitViewController.swift */; };
 		454A7E2827628553001440D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A7E2727628553001440D8 /* TabBarController.swift */; };
+		45DFC5D3276629C10073E191 /* DoctorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DFC5D2276629C10073E191 /* DoctorInfoView.swift */; };
+		45DFC5D527676E530073E191 /* DoctorInfo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DFC5D427676E530073E191 /* DoctorInfo2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		451AC8FE27628B68007D664D /* FirstCheckUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCheckUpViewController.swift; sourceTree = "<group>"; };
 		454A7E25276284D5001440D8 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		454A7E2727628553001440D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		45DFC5D2276629C10073E191 /* DoctorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoView.swift; sourceTree = "<group>"; };
+		45DFC5D427676E530073E191 /* DoctorInfo2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfo2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 			children = (
 				451AC8F9276286F1007D664D /* DoctorInfoViewController.swift */,
 				451AC8F8276286F0007D664D /* DoctorTimeCollectionViewController.swift */,
+				45DFC5D2276629C10073E191 /* DoctorInfoView.swift */,
+				45DFC5D427676E530073E191 /* DoctorInfo2ViewController.swift */,
 			);
 			path = DoctorInfoViewContorller;
 			sourceTree = "<group>";
@@ -248,9 +254,11 @@
 				451AC8FA276286F1007D664D /* DoctorInfoViewController.swift in Sources */,
 				451AC8FB276286F1007D664D /* DoctorTimeCollectionViewController.swift in Sources */,
 				451AC8F6276286EB007D664D /* DoctorTypeTableViewCell.swift in Sources */,
+				45DFC5D3276629C10073E191 /* DoctorInfoView.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
 				451AC8F5276286EB007D664D /* ChooseDoctorTypeViewController.swift in Sources */,
 				451AC8FF27628B68007D664D /* FirstCheckUpViewController.swift in Sources */,
+				45DFC5D527676E530073E191 /* DoctorInfo2ViewController.swift in Sources */,
 				454A7E26276284D5001440D8 /* InitViewController.swift in Sources */,
 				451AC8F7276286EB007D664D /* DoctorTypeView.swift in Sources */,
 				04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */,

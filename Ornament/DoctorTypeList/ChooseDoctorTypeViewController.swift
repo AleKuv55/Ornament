@@ -38,15 +38,15 @@ class ChooseDoctorTypeViewController: UIViewController {
     
     override func loadView() {
         self.view = doctorTypeTableView
-        
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad ()
         self.title = "Выберите врача"
 
 //        doctorNameList.append()
-        doctorNameList.append(contentsOf: [[PersonDoctor1, PersonDoctor2], [PersonDoctor3], [PersonDoctor4], [PersonDoctor5], [PersonDoctor1],[PersonDoctor2]] )
+        doctorNameList.append(contentsOf: [[PersonDoctor1, PersonDoctor2], [PersonDoctor3], [PersonDoctor4], [PersonDoctor5], [PersonDoctor1],[PersonDoctor2]])
+        
+        doctorTypeTableView.backgroundColor = .white
         doctorTypeTableView.tableView.sectionHeaderHeight = UITableView.automaticDimension
         doctorTypeTableView.tableView.rowHeight = UITableView.automaticDimension
         doctorTypeTableView.tableView.register(DoctorTypeTableViewCell.self, forCellReuseIdentifier:"reuseIdentifier")
@@ -95,7 +95,7 @@ extension ChooseDoctorTypeViewController: UITableViewDataSource {
     cell.layer.borderColor = UIColor.black.cgColor
     cell.layer.borderWidth = 1
     cell.layer.cornerRadius = 8
-    cell.selectionStyle = .gray
+//    cell.selectionStyle = .gray
 
 
 //    cell.clipsToBounds = true
