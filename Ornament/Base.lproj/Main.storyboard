@@ -11,7 +11,6 @@
         <!--Init View Controller-->
         <scene sceneID="dh1-rH-Jy0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oWA-sw-Bnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Init" useStoryboardIdentifierAsRestorationIdentifier="YES" id="csv-WO-i35" customClass="InitViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EJe-89-GAS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -41,6 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LsO-aa-Ufc"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWA-sw-Bnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="-719"/>
         </scene>
@@ -61,7 +61,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMD-wb-lzo">
                                 <rect key="frame" x="0.0" y="69" width="414" height="179"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dcac5i7-8dea9e39-a514-42e0-902b-870532ddab17" translatesAutoresizingMaskIntoConstraints="NO" id="CGJ-dD-W8t">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bolkonskiy" translatesAutoresizingMaskIntoConstraints="NO" id="CGJ-dD-W8t">
                                         <rect key="frame" x="8" y="25" width="142" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -72,8 +72,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Стаж 300 лет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjD-qL-Yb7">
-                                        <rect key="frame" x="22" y="143" width="115" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Стаж 10 лет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjD-qL-Yb7">
+                                        <rect key="frame" x="22" y="143" width="95" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -93,8 +93,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-Rb-fAY">
-                                        <rect key="frame" x="109" y="25" width="28" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-Rb-fAY">
+                                        <rect key="frame" x="102" y="25" width="28" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -103,10 +103,16 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберете подходящее время" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1F-go-ADy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1F-go-ADy">
                                 <rect key="frame" x="20" y="256" width="374" height="150"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Выберете подходящее время">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="29"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -129,7 +135,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="awm-QM-Fbm" id="hRa-BM-J1N"/>
+                        <outlet property="doctorImage" destination="CGJ-dD-W8t" id="fxd-A3-X0i"/>
                         <outlet property="doctorName" destination="p2M-8D-7E4" id="UTr-IS-3XH"/>
+                        <outlet property="doctorScore" destination="Ma4-Rb-fAY" id="s4w-iu-3l5"/>
+                        <outlet property="doctorStatus" destination="U42-zC-g24" id="VhH-xG-cbf"/>
+                        <outlet property="doctorTypeLabel" destination="U42-zC-g24" id="6vq-NO-Sc6"/>
+                        <outlet property="doctorYearsWork" destination="NjD-qL-Yb7" id="OUQ-dx-lbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgc-zn-inR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7z-Ip-sdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128" y="5"/>
+            <point key="canvasLocation" x="1035" y="-68"/>
         </scene>
         <!--First check up-->
         <scene sceneID="whF-4G-XYf">
@@ -228,7 +239,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dcac5i7-8dea9e39-a514-42e0-902b-870532ddab17" width="1417" height="1394"/>
+        <image name="Bolkonskiy" width="1417" height="1394"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

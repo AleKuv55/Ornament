@@ -13,7 +13,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         delegate = self
         
-        
     }
     
 
@@ -24,11 +23,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let customViewController = storyboard.instantiateViewController(withIdentifier: "FirstCheckUp") as! FirstCheckUpViewController
 
-        let item1 = ChooseDoctorTypeViewController()
+        let item1 = MainMenuViewController()
+
+        let item2 = ChooseDoctorTypeViewController()
 //        let icon1 = UITabBarItem(title: "Title", image: imageSetting, tag: 0)
 //        item1.tabBarItem = icon1
-        let item2 = SettingnsViewController()
         let item3 = customViewController
+        let item4 = SettingnsViewController()
+
        
 
         //        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Image"), selectedImage: UIImage(named: "Image"))
@@ -36,7 +38,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 //        let item2 = ChooseDoctorTypeViewController()
 //        let icon2 = UITabBarItem(title: "Title", image: UIImage(named: "Dima.png"), selectedImage: UIImage(named: "otherImage.png"))
 //        item2.tabBarItem = icon2
-        let controllers = [item1, item2, item3]
+        let controllers = [item1, item2, item3, item4]
         self.viewControllers = controllers
     }
 

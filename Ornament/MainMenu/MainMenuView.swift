@@ -1,27 +1,26 @@
 //
-//  DoctorTypeView.swift
+//  DoctorInfoView.swift
 //  Ornament
 //
-//  Created by Alexandr Kuznetsov on 21.11.2021.
+//  Created by Alexandr Kuznetsov on 12.12.2021.
 //
 
 import UIKit
 
-class DoctorTypeView: UIView {
+class MainMenuView: UIView {
 
     private let headerLabel: UILabel = {
         let label = UILabel()
+        label.text = "Добро пожаловать,"
         label.textColor = .black
         label.font = label.font.withSize(40)
         label.textAlignment = .left
-        label.text = "Записаться к врачу"
         label.font = label.font.bold
         return label
     }()
-    
     private let subLabel: UILabel = {
         let label = UILabel()
-        label.text = "Только лучшие специалисты"
+        label.text = "Ешьте больше овощей"
         label.textColor = .lightGray
         label.font = label.font.withSize(20)
         label.textAlignment = .left
@@ -34,7 +33,7 @@ class DoctorTypeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
-//        backgroundColor = .white
+        backgroundColor = .gray
     }
     
     required init?(coder: NSCoder) {
@@ -44,17 +43,18 @@ class DoctorTypeView: UIView {
     private func addSubviews() {
         //стоит ли наследовать от UIViewCell, чтобы потом добавить contentView и норм обрабатывать нажатия
         addSubview(headerLabel)
-        addSubview(tableView)
         addSubview(subLabel)
+        addSubview(tableView)
         self.subviews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         UpdateConstraints()
 
+
+
     }
     func UpdateConstraints(){
         [
-            
             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -65,17 +65,44 @@ class DoctorTypeView: UIView {
             subLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             subLabel.bottomAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 30),
             
-             tableView.topAnchor.constraint (equalTo: subLabel.bottomAnchor, constant: 20),
-             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-             tableView.bottomAnchor.constraint (equalTo: self.bottomAnchor)
+            tableView.topAnchor.constraint (equalTo: subLabel.bottomAnchor, constant: 4),
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            tableView.bottomAnchor.constraint (equalTo: self.bottomAnchor)
+            
             
         ].forEach { $0.isActive = true }
-        
          super.updateConstraints ()
     }
-    
+
 
 }
+extension UIFont {
+    var bold: UIFont {
+        return with(.traitBold)
+    }
+
+    var italic: UIFont {
+        return with(.traitItalic)
+    }
+
+    var boldItalic: UIFont {
+        return with([.traitBold, .traitItalic])
+    }
 
 
+
+    func with(_ traits: UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        guard let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits).union(self.fontDescriptor.symbolicTraits)) else {
+            return self
+        }
+        return UIFont(descriptor: descriptor, size: 0)
+    }
+
+    func without(_ traits: UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        guard let descriptor = self.fontDescriptor.withSymbolicTraits(self.fontDescriptor.symbolicTraits.subtracting(UIFontDescriptor.SymbolicTraits(traits))) else {
+            return self
+        }
+        return UIFont(descriptor: descriptor, size: 0)
+    }
+}

@@ -18,7 +18,7 @@ class DoctorTypeTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
         setupConstraints()
-        selectionStyle = .none
+        selectionStyle = .blue
     }
     
     required init?(coder: NSCoder) {
@@ -26,7 +26,7 @@ class DoctorTypeTableViewCell: UITableViewCell {
         
     private let viewContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+//        view.backgroundColor = .white
         return view
     }()
 
@@ -63,10 +63,7 @@ class DoctorTypeTableViewCell: UITableViewCell {
         viewContainer.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
         viewContainer.topAnchor.constraint (equalTo: self.contentView.topAnchor),
         viewContainer.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-//        viewContainer.heightAnchor.constraint(equalToConstant: 141),
-
         viewContainer.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-//        viewContainer.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -64),
 
 
         doctorTypeLabel.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 32),
@@ -78,13 +75,6 @@ class DoctorTypeTableViewCell: UITableViewCell {
         extraInfoLabel.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 32),
         extraInfoLabel.topAnchor.constraint (equalTo: doctorTypeLabel.bottomAnchor, constant: 4),
         extraInfoLabel.trailingAnchor.constraint(equalTo: doctorTypeLabel.trailingAnchor),
-//        extraInfoLabel.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor)
-
-        
-//        doctorTypeLabel.leadingAnchor.constraint (equalTo: viewContainer.topAnchor, 32),
-//        doctorTypeLabel.topAnchor.constraint(equalTo: viewContainer.leftAnchor, constant: 32),
-//        viewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-//        viewContainer.bottomAnchor.constraint (equalTo: self.bottomAnchor)
    ].forEach { $0.isActive = true }
         super.updateConstraints()
         }

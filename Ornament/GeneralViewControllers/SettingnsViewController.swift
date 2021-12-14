@@ -15,10 +15,9 @@ class SettingnsViewController: UIViewController {
    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        view.backgroundColor = UIColor.green
-        title = "item1"
-        print("item 1 loaded")
-        tabBarItem.image = .remove
+        tabBarItem.image = UIImage.init(named: "profileImage")
+        self.title = "Профиль"
+
     }
     
     required init?(coder: NSCoder) {

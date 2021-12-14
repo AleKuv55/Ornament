@@ -12,11 +12,20 @@ class DoctorInfo2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.doctorName.text = doctor.name
-        
+        self.doctorImage.image = UIImage.init(named: doctor.imagePath)
+
+        self.doctorStatus.text = doctor.isBusy ? "Занят" : "Свободен"
+        self.doctorScore.text = doctor.rating
+//        self.doctorType.text = doctor.
     }
+    @IBOutlet weak var doctorYearsWork: UILabel!
     
+
+    @IBOutlet weak var doctorStatus: UILabel!
     @IBOutlet weak var doctorName: UILabel!
+    @IBOutlet weak var doctorScore: UILabel!
     
+    @IBOutlet weak var doctorTypeLabel: UILabel!
     @IBOutlet weak var doctorImage: UIImageView!
     
     @IBSegueAction func emdedInfo(_ coder: NSCoder) -> DoctorTimeCollectionViewController? {

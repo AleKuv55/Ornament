@@ -12,10 +12,10 @@ class ChooseDoctorTypeViewController: UIViewController {
     let list: [String] = ["Терапевт","Хирург","Лор","Офтальмолог", "Диетолог", "Психолог"]
 
     let PersonDoctor1: PersonDoctorDataModel = PersonDoctorDataModel(name: "Андрей Болконcкий", imagePath: "Bolkonskiy", rating: "1", isBusy: false)
-    let PersonDoctor2: PersonDoctorDataModel = PersonDoctorDataModel(name: "Оксимирон", imagePath: "Image", rating: "2", isBusy: true)
+    let PersonDoctor2: PersonDoctorDataModel = PersonDoctorDataModel(name: "Оксимирон", imagePath: "Oxxy", rating: "2", isBusy: true)
     let PersonDoctor3: PersonDoctorDataModel = PersonDoctorDataModel(name: "Дмитрий Путьков", imagePath: "Dima", rating: "5", isBusy: false)
     let PersonDoctor4: PersonDoctorDataModel = PersonDoctorDataModel(name: "Орландо Блум", imagePath: "Orlando", rating: "4", isBusy: false)
-    let PersonDoctor5: PersonDoctorDataModel = PersonDoctorDataModel(name: "Андрей Болконcкий", imagePath: "Image", rating: "3", isBusy: false)
+    let PersonDoctor5: PersonDoctorDataModel = PersonDoctorDataModel(name: "Андрей Болконcкий", imagePath: "Oxxy", rating: "3", isBusy: false)
     
     var doctorNameList: [[PersonDoctorDataModel]] = []
 //        [[PersonDoctor1, PersonDoctor2], [PersonDoctor3], [PersonDoctor4]]
@@ -24,12 +24,9 @@ class ChooseDoctorTypeViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Settings"), tag: 0)
-//        UIImage.add
-//        tabBarItem = icon1
-        tabBarItem.image = UIImage.add
-        tabBarItem.selectedImage = UIImage.add
-        
+        tabBarItem.image = UIImage.init(named: "chatImage")
+        self.title = "Выберите врача"
+
     }
     
     required init?(coder: NSCoder) {
@@ -41,12 +38,12 @@ class ChooseDoctorTypeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad ()
-        self.title = "Выберите врача"
 
-//        doctorNameList.append()
         doctorNameList.append(contentsOf: [[PersonDoctor1, PersonDoctor2], [PersonDoctor3], [PersonDoctor4], [PersonDoctor5], [PersonDoctor1],[PersonDoctor2]])
         
         doctorTypeTableView.backgroundColor = .white
+        doctorTypeTableView.tableView.tableFooterView = UIView()
+        
         doctorTypeTableView.tableView.sectionHeaderHeight = UITableView.automaticDimension
         doctorTypeTableView.tableView.rowHeight = UITableView.automaticDimension
         doctorTypeTableView.tableView.register(DoctorTypeTableViewCell.self, forCellReuseIdentifier:"reuseIdentifier")
@@ -78,7 +75,7 @@ extension ChooseDoctorTypeViewController: UITableViewDataSource {
     
     // Set the spacing between sections
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
+        return 10
     }
 
     
@@ -94,8 +91,9 @@ extension ChooseDoctorTypeViewController: UITableViewDataSource {
     cell.update(type: list[indexPath.section])
     cell.layer.borderColor = UIColor.black.cgColor
     cell.layer.borderWidth = 1
-    cell.layer.cornerRadius = 8
-//    cell.selectionStyle = .gray
+    cell.layer.cornerRadius = 50
+    cell.backgroundColor = .systemGray6
+    cell.selectionStyle = .none
 
 
 //    cell.clipsToBounds = true

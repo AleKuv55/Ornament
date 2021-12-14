@@ -20,7 +20,7 @@ class PersonDoctorTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
         setupConstraints()
-        selectionStyle = .none
+//        selectionStyle = .gray
     }
     
     required init?(coder: NSCoder) {
@@ -28,21 +28,21 @@ class PersonDoctorTableViewCell: UITableViewCell {
         
     private let viewContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .clear
+//        view.backgroundColor = .clear
         return view
     }()
 
     private let doctorNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Путьков Дмитрий"
-        label.font = UIFont.systemFont(ofSize: 17)
+        label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .black
         return label
     }()
     private let doctorBusyLabel: UILabel = {
         let label = UILabel()
         label.text = "Свободен"
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = .green
         return label
     }()
@@ -90,10 +90,10 @@ class PersonDoctorTableViewCell: UITableViewCell {
         viewContainer.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
         viewContainer.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
 
-        photoDoctor.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 32),
-        photoDoctor.topAnchor.constraint (equalTo: viewContainer.topAnchor, constant: 32),
-        photoDoctor.widthAnchor.constraint(equalToConstant: 64),
-        photoDoctor.heightAnchor.constraint(equalToConstant: 64),
+        photoDoctor.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 16),
+        photoDoctor.topAnchor.constraint (equalTo: viewContainer.topAnchor, constant: 16),
+        photoDoctor.widthAnchor.constraint(equalToConstant: 80),
+        photoDoctor.heightAnchor.constraint(equalToConstant: 80),
         photoDoctor.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -32),
         
         doctorNameLabel.leadingAnchor.constraint(equalTo: photoDoctor.trailingAnchor, constant: 16),

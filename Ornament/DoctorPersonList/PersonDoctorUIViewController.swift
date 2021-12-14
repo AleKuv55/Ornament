@@ -34,7 +34,7 @@ class PersonDoctorUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.title = "Просмотрите врачей"
-        
+        personDoctorTableView.tableView.tableFooterView = UIView()
         personDoctorTableView.tableView.rowHeight = UITableView.automaticDimension
         personDoctorTableView.tableView.sectionHeaderHeight = UITableView.automaticDimension
         personDoctorTableView.tableView.register(PersonDoctorTableViewCell.self, forCellReuseIdentifier:"reuseIdentifier")
@@ -66,11 +66,12 @@ extension PersonDoctorUIViewController: UITableViewDataSource {
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! PersonDoctorTableViewCell
-//    cell.update(data: doctors[indexPath.section])
     cell.updateCellData(dataModel: doctors[indexPath.section])
-    cell.layer.borderColor = UIColor.black.cgColor
-    cell.layer.borderWidth = 1
-    cell.layer.cornerRadius = 8
+    
+    cell.selectionStyle = .gray
+//    cell.layer.borderColor = UIColor.clear.cgColor
+//    cell.layer.borderWidth = 0
+//    cell.layer.cornerRadius = 8
 
     return cell
   }
@@ -78,12 +79,8 @@ extension PersonDoctorUIViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
-//    let viewController = storyboard.instantiateViewController(withIdentifier: "DoctorInfo2") as! DoctorInfo2ViewController
-
     let viewController = storyboard.instantiateViewController(identifier: "DoctorInfo2",
-                                                              creator:
-                                                                { coder in return DoctorInfo2ViewController(coder: coder, doctor: self.doctors[indexPath.section])})
-//    storyboard.instantiateViewController(identifier: <#T##String#>, creator: T##((NSCoder) -> ViewController?)?##((NSCoder) -> ViewController?)?##(NSCoder) -> ViewController?)
+      creator: { coder in return DoctorInfo2ViewController(coder: coder, doctor: self.doctors[indexPath.section])})
 
         self.navigationController?.pushViewController(viewController, animated: true)
   }

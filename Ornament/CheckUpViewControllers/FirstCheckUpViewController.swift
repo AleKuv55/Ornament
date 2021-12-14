@@ -14,20 +14,26 @@ class FirstCheckUpViewController: UIViewController {
         // если добавлять свою, то делать так
 //                let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Settings"), tag: 0)
 //                let icon1 = UIImage.add
-        tabBarItem.image = UIImage.checkmark
     }
     override func viewWillAppear(_ animated: Bool) {
+//        tabBarItem.image = UIImage.init(named: "chatImage")
+
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        tabBarItem.image = UIImage.checkmark
-        tabBarItem.selectedImage = UIImage.strokedCheckmark
-    }
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//        tabBarItem.image = UIImage.init(named: "chatImage")
+//
+//    }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        tabBarItem.image = UIImage.init(named: "checkUPImage")
+        self.title = "Чекапы"
 //        fatalError("init(coder:) has not been implemented")
+    }
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
 

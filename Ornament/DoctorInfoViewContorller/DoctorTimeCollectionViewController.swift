@@ -17,6 +17,7 @@ class DoctorTimeCollectionViewController: UIViewController {
     var collectionView: UICollectionView! = nil
     
     let doctorTime:[String]
+
     init?(coder: NSCoder, doctorTime: [String]) {
         self.doctorTime = doctorTime
         super.init(coder: coder)
