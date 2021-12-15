@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045239BA27694C18000B8C63 /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239B927694C18000B8C63 /* SettingsMenuView.swift */; };
+		045239BC276956EC000B8C63 /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239BB276956EC000B8C63 /* SettingsViewCell.swift */; };
+		045239BE27695700000B8C63 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239BD276956FF000B8C63 /* ProfileViewCell.swift */; };
+		045239C0276A9094000B8C63 /* TwoCategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239BF276A9093000B8C63 /* TwoCategoryCollectionViewController.swift */; };
 		0474D4DF276220EF00C0A1B3 /* TwoColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */; };
 		0474D4E62762248400C0A1B3 /* DummyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474D4E42762248400C0A1B3 /* DummyCell.swift */; };
 		0474D4E72762248400C0A1B3 /* DummyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0474D4E52762248400C0A1B3 /* DummyCell.xib */; };
@@ -36,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045239B927694C18000B8C63 /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
+		045239BB276956EC000B8C63 /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
+		045239BD276956FF000B8C63 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		045239BF276A9093000B8C63 /* TwoCategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnViewController.swift; sourceTree = "<group>"; };
 		0474D4E42762248400C0A1B3 /* DummyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyCell.swift; sourceTree = "<group>"; };
 		0474D4E52762248400C0A1B3 /* DummyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DummyCell.xib; sourceTree = "<group>"; };
@@ -77,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045239B827694BA0000B8C63 /* SettingsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				451AC8FC276286F5007D664D /* SettingnsViewController.swift */,
+				045239B927694C18000B8C63 /* SettingsMenuView.swift */,
+				045239BB276956EC000B8C63 /* SettingsViewCell.swift */,
+				045239BD276956FF000B8C63 /* ProfileViewCell.swift */,
+			);
+			path = SettingsMenu;
+			sourceTree = "<group>";
+		};
 		0474D4E32762246800C0A1B3 /* CellCheckUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +113,7 @@
 				451AC8FE27628B68007D664D /* FirstCheckUpViewController.swift */,
 				0474D4DE276220EF00C0A1B3 /* TwoColumnViewController.swift */,
 				0474D4E9276257A800C0A1B3 /* AllCheckUpsViewController.swift */,
+				045239BF276A9093000B8C63 /* TwoCategoryCollectionViewController.swift */,
 			);
 			path = CheckUpViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +137,7 @@
 		04F0388D273C373B00E90CBC /* Ornament */ = {
 			isa = PBXGroup;
 			children = (
+				045239B827694BA0000B8C63 /* SettingsMenu */,
 				454851322767AF870034AE9B /* MainMenu */,
 				452598BD2765FA4E00FB1450 /* DoctorInfoViewContorller */,
 				452598BC2765FA1000FB1450 /* DoctorTypeList */,
@@ -168,7 +189,6 @@
 			children = (
 				454A7E25276284D5001440D8 /* InitViewController.swift */,
 				454A7E2727628553001440D8 /* TabBarController.swift */,
-				451AC8FC276286F5007D664D /* SettingnsViewController.swift */,
 			);
 			path = GeneralViewControllers;
 			sourceTree = "<group>";
@@ -261,16 +281,20 @@
 				454A7E2827628553001440D8 /* TabBarController.swift in Sources */,
 				451AC8F0276286E4007D664D /* PersonDoctorTableViewCell.swift in Sources */,
 				0474D4E62762248400C0A1B3 /* DummyCell.swift in Sources */,
+				045239BA27694C18000B8C63 /* SettingsMenuView.swift in Sources */,
 				0474D4EC27625ADD00C0A1B3 /* CheckUpCell.swift in Sources */,
 				451AC8FA276286F1007D664D /* MainMenuViewController.swift in Sources */,
 				451AC8FB276286F1007D664D /* DoctorTimeCollectionViewController.swift in Sources */,
 				451AC8F6276286EB007D664D /* DoctorTypeTableViewCell.swift in Sources */,
 				45DFC5D3276629C10073E191 /* MainMenuView.swift in Sources */,
+				045239BE27695700000B8C63 /* ProfileViewCell.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
 				454851342767AFD20034AE9B /* MainMenuTableViewCell.swift in Sources */,
 				451AC8F5276286EB007D664D /* ChooseDoctorTypeViewController.swift in Sources */,
 				451AC8FF27628B68007D664D /* FirstCheckUpViewController.swift in Sources */,
 				45DFC5D527676E530073E191 /* DoctorInfo2ViewController.swift in Sources */,
+				045239BC276956EC000B8C63 /* SettingsViewCell.swift in Sources */,
+				045239C0276A9094000B8C63 /* TwoCategoryCollectionViewController.swift in Sources */,
 				454A7E26276284D5001440D8 /* InitViewController.swift in Sources */,
 				451AC8F7276286EB007D664D /* DoctorTypeView.swift in Sources */,
 				04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */,

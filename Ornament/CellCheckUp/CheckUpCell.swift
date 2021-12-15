@@ -22,6 +22,7 @@ class CheckUpCell: UICollectionViewCell {
         super.awakeFromNib()
         layer.borderColor = UIColor.systemGray4.cgColor
         layer.borderWidth = 1.0
+        
     }
 
     

@@ -23,7 +23,6 @@ class TwoColumnViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Two Column"
         configureHierarchy()
         configureDataSource()
 
@@ -41,7 +40,7 @@ class TwoColumnViewController: UIViewController {
             let trailingItem2 = NSCollectionLayoutItem(
                 layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                    heightDimension: .fractionalHeight(1.0)))
-            trailingItem2.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 10)
+            trailingItem2.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 24)
             
             let trailingItem2Group = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6),
@@ -50,14 +49,13 @@ class TwoColumnViewController: UIViewController {
             
             let group = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                   heightDimension: .fractionalHeight(1.0)),
+                                                   heightDimension: .fractionalHeight(1.5)),
                 subitems: [trailingItem1, trailingItem2Group])
             
             let section = NSCollectionLayoutSection(group: group)
             
             return section
         }
-        
         return layout
     }
     
@@ -69,6 +67,7 @@ class TwoColumnViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: DummyCell.reuseIdentifier)
         view.addSubview(collectionView)
         collectionView.isScrollEnabled = false
+
     }
     
     private func configureDataSource() {
