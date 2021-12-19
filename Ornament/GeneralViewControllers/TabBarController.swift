@@ -12,9 +12,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        
     }
-    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,18 +24,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let item1 = MainMenuViewController()
 
         let item2 = ChooseDoctorTypeViewController()
-//        let icon1 = UITabBarItem(title: "Title", image: imageSetting, tag: 0)
-//        item1.tabBarItem = icon1
+
         let item3 = customViewController
+        
         let item4 = SettingnsViewController()
 
-       
-
-        //        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "Image"), selectedImage: UIImage(named: "Image"))
-//        item1.tabBarItem = icon1
-//        let item2 = ChooseDoctorTypeViewController()
-//        let icon2 = UITabBarItem(title: "Title", image: UIImage(named: "Dima.png"), selectedImage: UIImage(named: "otherImage.png"))
-//        item2.tabBarItem = icon2
         let controllers = [item1, item2, item3, item4]
         self.viewControllers = controllers
     }
@@ -47,16 +38,4 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         print("Should select viewController: \(viewController.title ?? "") ?")
         return true
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

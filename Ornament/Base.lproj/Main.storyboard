@@ -172,24 +172,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCm-7F-c5m">
-                                <rect key="frame" x="0.0" y="89" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="164" width="414" height="652"/>
                                 <connections>
                                     <segue destination="GFZ-tH-70u" kind="embed" destinationCreationSelector="embedAllCheckups:" id="fDU-eX-3kr"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберете чекап" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aif-0p-t7h">
+                                <rect key="frame" x="20" y="94" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vhp-bJ-OHK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v0w-lI-Kol"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="v0w-lI-Kol" secondAttribute="top" constant="45" id="hh6-ZG-Hmr"/>
-                            <constraint firstAttribute="bottom" secondItem="HCm-7F-c5m" secondAttribute="bottom" constant="80" id="lWc-7h-50f"/>
-                            <constraint firstItem="HCm-7F-c5m" firstAttribute="centerX" secondItem="dOH-mh-XdM" secondAttribute="centerX" id="ljb-G4-gEM"/>
-                            <constraint firstItem="HCm-7F-c5m" firstAttribute="leading" secondItem="v0w-lI-Kol" secondAttribute="leading" id="vGV-Ib-zMY"/>
+                            <constraint firstItem="aif-0p-t7h" firstAttribute="centerX" secondItem="dOH-mh-XdM" secondAttribute="centerX" id="6iy-Cy-gfy"/>
+                            <constraint firstItem="v0w-lI-Kol" firstAttribute="bottom" secondItem="HCm-7F-c5m" secondAttribute="bottom" constant="46" id="StP-ji-xMB"/>
+                            <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="aif-0p-t7h" secondAttribute="bottom" constant="30" id="UBM-Vs-u5I"/>
+                            <constraint firstItem="aif-0p-t7h" firstAttribute="leading" secondItem="v0w-lI-Kol" secondAttribute="leading" constant="20" id="Yyp-I3-oQH"/>
+                            <constraint firstItem="HCm-7F-c5m" firstAttribute="leading" secondItem="v0w-lI-Kol" secondAttribute="leading" id="lCt-Hw-7UT"/>
+                            <constraint firstItem="aif-0p-t7h" firstAttribute="top" secondItem="v0w-lI-Kol" secondAttribute="top" constant="50" id="xOj-XD-L7U"/>
+                            <constraint firstItem="HCm-7F-c5m" firstAttribute="centerX" secondItem="aif-0p-t7h" secondAttribute="centerX" id="xnY-BE-wh8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QF2-4k-QSJ"/>
                     <connections>
                         <outlet property="allCheckUps" destination="HCm-7F-c5m" id="KQc-sy-5I0"/>
+                        <outlet property="headerFirstCheck" destination="aif-0p-t7h" id="VI9-cg-put"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJX-rF-xEZ" sceneMemberID="firstResponder"/>

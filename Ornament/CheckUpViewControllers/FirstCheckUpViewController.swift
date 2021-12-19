@@ -9,15 +9,13 @@ import UIKit
 
 class FirstCheckUpViewController: UIViewController {
 
-//    @IBOutlet weak var twoCategory: UIView!
     @IBOutlet weak var allCheckUps: UIView!
     
-    @IBSegueAction func embedAllCheckups(_ coder: NSCoder) -> AllCheckUpsViewController? {
-        return AllCheckUpsViewController(coder: coder)
-    }
-    
+    @IBOutlet weak var headerFirstCheck: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Чекапы"
         
     }
     override func viewWillAppear(_ animated: Bool) {

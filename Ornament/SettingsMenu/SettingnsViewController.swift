@@ -16,10 +16,10 @@ class SettingnsViewController: UIViewController {
 
     override func loadView() {
         self.view = settingsMenuView
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         }
 
-    let settingsInfo: [SettingsDataModel] = [SettingsDataModel(setting: "Позвонить нам"),
+    private let settingsInfo: [SettingsDataModel] = [SettingsDataModel(setting: "Позвонить нам"),
                                              SettingsDataModel(setting: "О проекте"),
                                              SettingsDataModel(setting: "Условия")]
     
@@ -27,7 +27,6 @@ class SettingnsViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         tabBarItem.image = UIImage.init(named: "profileImage")
         self.title = "Настройки"
-//        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     required init?(coder: NSCoder) {
@@ -71,11 +70,6 @@ extension SettingnsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! SettingsViewCell
         cell.updCellData(dataModel: settingsInfo[indexPath.section])
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        self.tabBarController?.selectedIndex = indexPath.section + 1
     }
 }
 

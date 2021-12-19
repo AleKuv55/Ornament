@@ -18,12 +18,11 @@ class CheckUpInfoViewController: UIViewController {
     
     private let checkUp : CheckUpDataModel
 
-        init(checkUp: CheckUpDataModel) {
-            
-            self.checkUp = checkUp
-    //        super.init()
-            super.init(nibName: nil, bundle: nil)
-        }
+    init(checkUp: CheckUpDataModel) {
+        
+        self.checkUp = checkUp
+        super.init(nibName: nil, bundle: nil)
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
