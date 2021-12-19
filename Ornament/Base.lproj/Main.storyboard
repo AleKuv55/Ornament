@@ -218,84 +218,31 @@
             </objects>
             <point key="canvasLocation" x="867" y="-613"/>
         </scene>
-        <!--Выбранный чекап-->
-        <scene sceneID="bWq-vN-BwC">
+        <!--Select Check Up View Controller-->
+        <scene sceneID="5sp-hh-WNw">
             <objects>
-                <viewController id="0uo-cW-bCy" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UvU-Ir-Upe">
+                <viewController id="O47-EC-DWz" customClass="SelectCheckUpViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lK1-iv-Mcc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбранный чекап" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-FU-bD8">
-                                <rect key="frame" x="20" y="94" width="374" height="40.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-6s-Qm6">
-                                <rect key="frame" x="0.0" y="192" width="414" height="466"/>
-                                <connections>
-                                    <segue destination="mlO-ed-IZ5" kind="embed" id="OQz-BH-fbw"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужен, если" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-S9-ABV">
-                                <rect key="frame" x="20" y="154" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulz-C1-uHd">
-                                <rect key="frame" x="20" y="768" width="374" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <segue destination="O47-EC-DWz" kind="show" id="4Rw-Jt-5PT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Th9-sN-ooO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Ctm-FU-bD8" firstAttribute="leading" secondItem="Th9-sN-ooO" secondAttribute="leading" constant="20" id="0vl-dB-Zom"/>
-                            <constraint firstItem="bY4-S9-ABV" firstAttribute="top" secondItem="Th9-sN-ooO" secondAttribute="top" constant="110" id="6vS-yx-Iwf"/>
-                            <constraint firstItem="Ctm-FU-bD8" firstAttribute="top" secondItem="Th9-sN-ooO" secondAttribute="top" constant="50" id="DOF-fx-oar"/>
-                            <constraint firstItem="bY4-S9-ABV" firstAttribute="centerX" secondItem="UvU-Ir-Upe" secondAttribute="centerX" id="HbP-mX-5K3"/>
-                            <constraint firstItem="Ulz-C1-uHd" firstAttribute="leading" secondItem="Th9-sN-ooO" secondAttribute="leading" constant="20" id="KLG-vf-eif"/>
-                            <constraint firstItem="bY4-S9-ABV" firstAttribute="leading" secondItem="Th9-sN-ooO" secondAttribute="leading" constant="20" id="KwQ-gb-6oH"/>
-                            <constraint firstItem="KSf-6s-Qm6" firstAttribute="top" secondItem="bY4-S9-ABV" secondAttribute="bottom" constant="8" symbolic="YES" id="b2h-xg-LmP"/>
-                            <constraint firstItem="Th9-sN-ooO" firstAttribute="trailing" secondItem="Ulz-C1-uHd" secondAttribute="trailing" constant="20" id="cWu-LT-vXs"/>
-                            <constraint firstItem="KSf-6s-Qm6" firstAttribute="centerX" secondItem="bY4-S9-ABV" secondAttribute="centerX" id="cbM-wX-Ncg"/>
-                            <constraint firstItem="Ulz-C1-uHd" firstAttribute="top" secondItem="KSf-6s-Qm6" secondAttribute="bottom" constant="110" id="hyC-6J-Ivu"/>
-                            <constraint firstAttribute="bottom" secondItem="KSf-6s-Qm6" secondAttribute="bottom" constant="238" id="uV7-8G-XBL"/>
-                            <constraint firstItem="KSf-6s-Qm6" firstAttribute="leading" secondItem="UvU-Ir-Upe" secondAttribute="leading" id="vGo-qf-uV6"/>
-                            <constraint firstItem="Ctm-FU-bD8" firstAttribute="centerX" secondItem="UvU-Ir-Upe" secondAttribute="centerX" id="vdo-rE-2e4"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Выбранный чекап" id="Wfg-nb-AvO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fOZ-Vi-2EY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="82.608695652173921" y="-1639.2857142857142"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5sp-hh-WNw">
-            <objects>
-                <viewController id="O47-EC-DWz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lK1-iv-Mcc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберете удобное для записи время" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za6-7j-eD0">
-                                <rect key="frame" x="24" y="50" width="366" height="108"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za6-7j-eD0">
+                                <rect key="frame" x="24" y="94" width="366" height="118"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Выберете удобное для записи время">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amD-Wp-9ee">
-                                <rect key="frame" x="0.0" y="166" width="414" height="642"/>
+                                <rect key="frame" x="0.0" y="220" width="414" height="642"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="SdX-xl-1X7" kind="embed" id="SMY-fa-sgp"/>
+                                    <segue destination="SdX-xl-1X7" kind="embed" destinationCreationSelector="embedTime:" id="SMY-fa-sgp"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -309,30 +256,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UjS-q3-Yem"/>
+                    <connections>
+                        <outlet property="collectionView2" destination="amD-Wp-9ee" id="heF-GE-7oz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZe-rh-L2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="-1640"/>
+            <point key="canvasLocation" x="83" y="-1454"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DM9-NP-lRu">
-            <objects>
-                <viewController id="mlO-ed-IZ5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pVd-tB-1QX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="466"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ifn-aP-rIQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="61z-Pz-ppb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-630" y="-1779"/>
-        </scene>
-        <!--View Controller-->
+        <!--Check Up Time Collection View Controller-->
         <scene sceneID="NYw-xk-uQ1">
             <objects>
-                <viewController id="SdX-xl-1X7" sceneMemberID="viewController">
+                <viewController id="SdX-xl-1X7" customClass="CheckUpTimeCollectionViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xjd-QW-tu3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,16 +277,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBc-8P-srd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-1554"/>
+            <point key="canvasLocation" x="957" y="-1368"/>
         </scene>
     </scenes>
     <resources>
         <image name="Bolkonskiy" width="1417" height="1394"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

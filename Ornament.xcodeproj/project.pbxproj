@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043F56DF276FF74A00F583A2 /* CheckUpTimeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56DD276FF74A00F583A2 /* CheckUpTimeCollectionViewController.swift */; };
-		043F56E0276FF74A00F583A2 /* SelectCheckUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56DE276FF74A00F583A2 /* SelectCheckUpViewController.swift */; };
+		043F56E3276FFA6A00F583A2 /* CheckUpTimeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56E2276FFA6A00F583A2 /* CheckUpTimeCollectionViewController.swift */; };
+		043F56E5276FFA9B00F583A2 /* SelectCheckUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56E4276FFA9B00F583A2 /* SelectCheckUpViewController.swift */; };
 		045239BA27694C18000B8C63 /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239B927694C18000B8C63 /* SettingsMenuView.swift */; };
 		045239BC276956EC000B8C63 /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239BB276956EC000B8C63 /* SettingsViewCell.swift */; };
 		045239C3276F2DA0000B8C63 /* CheckUpInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239C2276F2DA0000B8C63 /* CheckUpInfoCell.swift */; };
@@ -42,8 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043F56DD276FF74A00F583A2 /* CheckUpTimeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckUpTimeCollectionViewController.swift; path = Ornament/SelectCheckUp/CheckUpTimeCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
-		043F56DE276FF74A00F583A2 /* SelectCheckUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCheckUpViewController.swift; sourceTree = "<group>"; };
+		043F56E2276FFA6A00F583A2 /* CheckUpTimeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpTimeCollectionViewController.swift; sourceTree = "<group>"; };
+		043F56E4276FFA9B00F583A2 /* SelectCheckUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCheckUpViewController.swift; sourceTree = "<group>"; };
 		045239B927694C18000B8C63 /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
 		045239BB276956EC000B8C63 /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		045239C2276F2DA0000B8C63 /* CheckUpInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpInfoCell.swift; sourceTree = "<group>"; };
@@ -90,15 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043F56DC276FF74A00F583A2 /* SelectCheckUp */ = {
+		043F56E1276FF9E100F583A2 /* SelectCheckUp */ = {
 			isa = PBXGroup;
 			children = (
-				043F56DD276FF74A00F583A2 /* CheckUpTimeCollectionViewController.swift */,
-				043F56DE276FF74A00F583A2 /* SelectCheckUpViewController.swift */,
+				043F56E2276FFA6A00F583A2 /* CheckUpTimeCollectionViewController.swift */,
+				043F56E4276FFA9B00F583A2 /* SelectCheckUpViewController.swift */,
 			);
-			name = SelectCheckUp;
-			path = /Users/mac/GitHub/Ornament/Ornament/SelectCheckUp;
-			sourceTree = "<absolute>";
+			path = SelectCheckUp;
+			sourceTree = "<group>";
 		};
 		045239B827694BA0000B8C63 /* SettingsMenu */ = {
 			isa = PBXGroup;
@@ -159,7 +158,7 @@
 		04F0388D273C373B00E90CBC /* Ornament */ = {
 			isa = PBXGroup;
 			children = (
-				043F56DC276FF74A00F583A2 /* SelectCheckUp */,
+				043F56E1276FF9E100F583A2 /* SelectCheckUp */,
 				045239C1276F2D43000B8C63 /* CheckUpInfo */,
 				045239B827694BA0000B8C63 /* SettingsMenu */,
 				454851322767AF870034AE9B /* MainMenu */,
@@ -311,8 +310,8 @@
 				451AC8FA276286F1007D664D /* MainMenuViewController.swift in Sources */,
 				451AC8FB276286F1007D664D /* DoctorTimeCollectionViewController.swift in Sources */,
 				045239C3276F2DA0000B8C63 /* CheckUpInfoCell.swift in Sources */,
-				043F56E0276FF74A00F583A2 /* SelectCheckUpViewController.swift in Sources */,
-				043F56DF276FF74A00F583A2 /* CheckUpTimeCollectionViewController.swift in Sources */,
+				043F56E5276FFA9B00F583A2 /* SelectCheckUpViewController.swift in Sources */,
+				043F56E3276FFA6A00F583A2 /* CheckUpTimeCollectionViewController.swift in Sources */,
 				451AC8F6276286EB007D664D /* DoctorTypeTableViewCell.swift in Sources */,
 				45DFC5D3276629C10073E191 /* MainMenuView.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
