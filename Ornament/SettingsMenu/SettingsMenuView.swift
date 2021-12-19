@@ -11,7 +11,7 @@ class SettingsMenuView: UIView {
     
     private let headerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Профиль"
+        label.text = "Настройки"
         label.textColor = .black
         label.font = label.font.withSize(40)
         label.textAlignment = .left
@@ -19,13 +19,12 @@ class SettingsMenuView: UIView {
         return label
     }()
     
-    let tableView1 = UITableView() // profile info (photo, name and surname)
-    let tableView2 = UITableView() // settings (О проекте, связаться с нами .. )
+    let tableView = UITableView() // settings (О проекте, связаться с нами .. )
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBackground
         addSubviews()
+        backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {
@@ -34,31 +33,24 @@ class SettingsMenuView: UIView {
     
     private func addSubviews() {
         addSubview(headerLabel)
-        addSubview(tableView1)
-        addSubview(tableView2)
+        addSubview(tableView)
         self.subviews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
-        updateConstraints()
+        updConstraint()
     }
     
-    override func updateConstraints(){
+    func updConstraint(){
         [
             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             headerLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 148),
             
-            tableView1.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
-            tableView1.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 24),
-            tableView1.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            tableView1.bottomAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 30),
-            
-            tableView2.topAnchor.constraint (equalTo: tableView1.bottomAnchor, constant: 4),
-            tableView2.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            tableView2.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            tableView2.bottomAnchor.constraint (equalTo: self.bottomAnchor)
-            
+            tableView.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 24),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 30),
             
         ].forEach { $0.isActive = true }
          super.updateConstraints ()

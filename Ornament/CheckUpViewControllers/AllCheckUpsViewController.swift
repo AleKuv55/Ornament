@@ -11,19 +11,51 @@ class AllCheckUpsViewController: UIViewController {
     
     let items = [
         "Ежегодная проверка",
+        "Спортсменам",
         "Постковидный чекап",
-        "Спотрсменам",
-        "Диетологический чекап",
-        "Планирование беременности",
-        "ПЦР-тест на коронавирус",
+        "Проверка после праздников",
         "Тест на антитела",
-        "Экспресс-тест на коронавирус на дому",
-        "Микроэлементы и витамины",
-        "Проверка диабета",
-        "Щитовидная железа",
-        "Суставы",
-        "Система пищеварения"
+        "Диетологический чекап",
+        "Микроэлементы и витамины"
     ]
+    
+    let checkUp1: CheckUpDataModel = CheckUpDataModel(checkUpName: "Ежегодная проверка",
+                                                      infoArray: ["Ещё не были на ежегодной проверке или редко находите время, чтобы сходить к врачу",
+                                                      "Спите меньше 8 часов или часто перекусываете, не налажен рацион",
+                                                      "Ведете сидячий образ жизни или проходите менее 2000 шагов"])
+
+    let checkUp2: CheckUpDataModel = CheckUpDataModel(checkUpName: "Спортсменам",
+                                                      infoArray: ["Если хотите участвовать в официальных спортивных мероприятиях",
+                                                      "Начинаете или ведете интенсивные тренировки в спортзале",
+                                                      "Собираетесь резко увеличить нагрузку"])
+
+    let checkUp3: CheckUpDataModel = CheckUpDataModel(checkUpName: "Постковидный чекап",
+                                                      infoArray: ["Переболели ковидом с симптомами или думаете, что перенесли вирус бессимптомно",
+                                                      "Периодически мучает учащенное сердцебиение или вам кажется, что сердце бьётся как-то не так",
+                                                      "Появилась одышка даже при небольших нагрузках, например прогулке"])
+
+    let checkUp4: CheckUpDataModel = CheckUpDataModel(checkUpName: "Проверка после праздников",
+                                                      infoArray: ["Ваше самочувствие после праздников ухудшилось",
+                                                      "У вас есть симптомы расстройства печени (слабость, потеря аппетита, боли в животе и др.)",
+                                                      "У вас повышен холестерин или есть хронические заболевания печени"])
+
+    let checkUp5: CheckUpDataModel = CheckUpDataModel(checkUpName: "Тест на антитела",
+                                                      infoArray: ["Вы переболели коронавирусом – с симптомами или без",
+                                                      "Думаете, что переболели коронавирусом",
+                                                      "Хотите знать количество антител, чтобы стать донором или сделать прививку"])
+
+    let checkUp6: CheckUpDataModel = CheckUpDataModel(checkUpName: "Диетологический чекап",
+                                                      infoArray: ["Не болеете, но чувствуете себя не очень",
+                                                      "Хотите улучшить свой рацион",
+                                                      "Хотите быть в тренде"])
+
+    let checkUp7: CheckUpDataModel = CheckUpDataModel(checkUpName: "Микроэлементы и витамины",
+                                                      infoArray: ["Ограничиваете себя в продуктах из-за аллергий, диет и другого",
+                                                      "Ломаются ногти, секутся волосы, кожа стала хуже",
+                                                      "Ослабленный иммунитет, усталость и депрессивность"])
+    
+    var checkUpList: [CheckUpDataModel] = []
+
     
     enum Section {
         case main
@@ -34,10 +66,16 @@ class AllCheckUpsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "All Check-up"
         configureHierarchy()
         configureDataSource()
-
+        checkUpList.append(contentsOf: [checkUp1,
+                                        checkUp2,
+                                        checkUp3,
+                                        checkUp4,
+                                        checkUp5,
+                                        checkUp6,
+                                        checkUp7
+                                       ])
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -58,7 +96,7 @@ class AllCheckUpsViewController: UIViewController {
         group.interItemSpacing = .fixed(spacing)
 
         let section = NSCollectionLayoutSection(group: group)
-        // leading - boarders of group, trailing - between items
+        // leading - left, trailing - right
         section.contentInsets = .init(top: 10, leading: 24, bottom: 10, trailing: 24)
         section.interGroupSpacing = spacing
         
@@ -72,6 +110,7 @@ class AllCheckUpsViewController: UIViewController {
         collectionView.backgroundColor = .systemBackground
         let nib = UINib(nibName: CheckUpCell.reuseIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: CheckUpCell.reuseIdentifier)
+        collectionView.delegate = self
         view.addSubview(collectionView)
     }
     
@@ -93,5 +132,14 @@ class AllCheckUpsViewController: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
 
     }
-    
+}
+
+extension AllCheckUpsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = CheckUpInfoViewController(checkUp: checkUpList[indexPath.item])
+//        let viewController = CheckUpInfoViewController(checkUpList[indexPath.section]: CheckUpDataModel)
+        self.navigationController?.pushViewController(viewController, animated: true)
+        print("didSelectItemAt")
+        
+    }
 }

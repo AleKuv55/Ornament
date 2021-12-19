@@ -1,19 +1,18 @@
 //
-//  SettingsViewCell.swift
+//  CheckUpInfoCell.swift
 //  Ornament
 //
-//  Created by Anastasia on 15.12.2021.
+//  Created by Anastasia on 19.12.2021.
 //
 
 import UIKit
 
-class SettingsViewCell: UITableViewCell {
-
+class CheckUpInfoCell: UITableViewCell {
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
         setupConstraints()
-        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
@@ -22,33 +21,30 @@ class SettingsViewCell: UITableViewCell {
     
     private let viewContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBackground
         return view
     }()
     
-    private let settingName: UILabel = {
+    private let checkUpInfoLabel: UILabel = {
         let label = UILabel()
-        label.text = "О проекте"
+        label.text = "Для поддержания здоровья"
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 17)
         label.textColor = .black
         return label
     }()
     
-    private func addSubviews() {
+    private func addSubviews () {
         contentView.addSubview(viewContainer)
-        contentView.addSubview(settingName)
+        contentView.addSubview(checkUpInfoLabel)
+
         self.contentView.subviews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
     }
     
-//    //// нужно ли прописывать это дважды?
-//    func update(data: String) {
-//        self.settingName.text = data
-//    }
+    func update(checkUpData: String) {
+        self.checkUpInfoLabel.text = checkUpData
     
-    func updCellData (dataModel: SettingsDataModel) {
-        self.settingName.text = dataModel.setting
     }
     
     func setupConstraints() {
@@ -57,13 +53,13 @@ class SettingsViewCell: UITableViewCell {
         viewContainer.topAnchor.constraint (equalTo: self.contentView.topAnchor),
         viewContainer.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
         viewContainer.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-        
-        settingName.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 20),
-        settingName.topAnchor.constraint (equalTo: viewContainer.topAnchor, constant: 20),
-        settingName.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
-        settingName.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -20),
-        
+
+        checkUpInfoLabel.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 32),
+        checkUpInfoLabel.topAnchor.constraint (equalTo: viewContainer.topAnchor, constant: 32),
+        checkUpInfoLabel.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor),
+        checkUpInfoLabel.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -32),
+
    ].forEach { $0.isActive = true }
         super.updateConstraints()
-        }
+    }
 }

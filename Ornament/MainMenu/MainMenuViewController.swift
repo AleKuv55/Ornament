@@ -74,29 +74,11 @@ extension MainMenuViewController: UITableViewDataSource {
   }
     
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    
-//    TabBarController.
-    var viewController = UIViewController()
-    switch indexPath.section {
-    case 0:
-        viewController = ChooseDoctorTypeViewController()
-        break;
-    case 1:
-        viewController = storyboard.instantiateViewController(withIdentifier: "FirstCheckUp") as! FirstCheckUpViewController
-        break;
-    case 2:
-        viewController = SettingnsViewController()
-        break;
-    default:
-        break;
-    }
-    self.navigationController?.pushViewController(viewController, animated: true)
-
-//    storyboard.instantiateViewController(identifier: <#T##String#>, creator: T##((NSCoder) -> ViewController?)?##((NSCoder) -> ViewController?)?##(NSCoder) -> ViewController?)
+      tableView.deselectRow(at: indexPath, animated: true)
+      self.tabBarController?.selectedIndex = indexPath.section + 1
 
   }
-  }
+}
 
 // MARK: - UITableviewDelegate
 extension MainMenuViewController: UITableViewDelegate {

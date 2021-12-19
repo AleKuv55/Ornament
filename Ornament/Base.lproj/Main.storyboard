@@ -172,73 +172,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCm-7F-c5m">
-                                <rect key="frame" x="0.0" y="214" width="414" height="602"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="727"/>
                                 <connections>
                                     <segue destination="GFZ-tH-70u" kind="embed" destinationCreationSelector="embedAllCheckups:" id="fDU-eX-3kr"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pi5-yG-cft">
-                                <rect key="frame" x="0.0" y="141" width="414" height="74"/>
-                                <connections>
-                                    <segue destination="RIg-8v-zFy" kind="embed" destinationCreationSelector="embedCategories:" id="Lfv-Js-50Y"/>
-                                </connections>
-                            </containerView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-CL-dMF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v0w-lI-Kol"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pi5-yG-cft" firstAttribute="trailing" secondItem="HCm-7F-c5m" secondAttribute="trailing" id="7yS-er-o6Q"/>
-                            <constraint firstItem="pi5-yG-cft" firstAttribute="top" secondItem="d1R-CL-dMF" secondAttribute="bottom" constant="53" id="8Ub-y3-XWu"/>
-                            <constraint firstItem="pi5-yG-cft" firstAttribute="leading" secondItem="d1R-CL-dMF" secondAttribute="leading" id="8zU-gZ-vq8"/>
-                            <constraint firstItem="pi5-yG-cft" firstAttribute="leading" secondItem="HCm-7F-c5m" secondAttribute="leading" id="RFV-3b-Aaq"/>
-                            <constraint firstItem="pi5-yG-cft" firstAttribute="top" secondItem="dOH-mh-XdM" secondAttribute="top" constant="141" id="fYY-Xl-iWc"/>
-                            <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="v0w-lI-Kol" secondAttribute="top" constant="170" id="hh6-ZG-Hmr"/>
+                            <constraint firstItem="HCm-7F-c5m" firstAttribute="top" secondItem="v0w-lI-Kol" secondAttribute="top" constant="45" id="hh6-ZG-Hmr"/>
                             <constraint firstAttribute="bottom" secondItem="HCm-7F-c5m" secondAttribute="bottom" constant="80" id="lWc-7h-50f"/>
                             <constraint firstItem="HCm-7F-c5m" firstAttribute="centerX" secondItem="dOH-mh-XdM" secondAttribute="centerX" id="ljb-G4-gEM"/>
-                            <constraint firstItem="pi5-yG-cft" firstAttribute="trailing" secondItem="d1R-CL-dMF" secondAttribute="trailing" id="qrO-QR-ORl"/>
-                            <constraint firstItem="v0w-lI-Kol" firstAttribute="bottom" secondItem="pi5-yG-cft" secondAttribute="bottom" constant="647" id="rbW-0H-feh"/>
                             <constraint firstItem="HCm-7F-c5m" firstAttribute="leading" secondItem="v0w-lI-Kol" secondAttribute="leading" id="vGV-Ib-zMY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QF2-4k-QSJ"/>
                     <connections>
                         <outlet property="allCheckUps" destination="HCm-7F-c5m" id="KQc-sy-5I0"/>
-                        <outlet property="twoCategory" destination="pi5-yG-cft" id="nr8-vD-oki"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJX-rF-xEZ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="-719.19642857142856"/>
         </scene>
-        <!--Two Column View Controller-->
-        <scene sceneID="ZJw-7x-aUu">
-            <objects>
-                <viewController id="RIg-8v-zFy" customClass="TwoColumnViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yXL-Wu-Nss">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Vr3-vx-fKT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gSU-6M-QKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="867" y="-978"/>
-        </scene>
         <!--All Check Ups View Controller-->
         <scene sceneID="sjE-uu-GMJ">
             <objects>
-                <viewController id="GFZ-tH-70u" customClass="AllCheckUpsViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kzn-UT-58L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="602"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="WBT-gq-JBf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
+                <viewController id="GFZ-tH-70u" customClass="AllCheckUpsViewController" customModule="Ornament" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58b-G9-06M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="867" y="-613"/>
@@ -346,6 +307,7 @@
                     <view key="view" contentMode="scaleToFill" id="pVd-tB-1QX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="466"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ifn-aP-rIQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -360,6 +322,7 @@
                     <view key="view" contentMode="scaleToFill" id="Xjd-QW-tu3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yxV-Xt-xAl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
