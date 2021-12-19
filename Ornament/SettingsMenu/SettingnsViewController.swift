@@ -8,7 +8,9 @@
 import UIKit
 
 struct SettingsDataModel {
-    let setting: String}
+    let setting: String
+    let settingImage: String
+}
 
 class SettingnsViewController: UIViewController {
 
@@ -19,9 +21,9 @@ class SettingnsViewController: UIViewController {
         view.backgroundColor = .white
         }
 
-    private let settingsInfo: [SettingsDataModel] = [SettingsDataModel(setting: "Позвонить нам"),
-                                             SettingsDataModel(setting: "О проекте"),
-                                             SettingsDataModel(setting: "Условия")]
+    private let settingsInfo: [SettingsDataModel] = [SettingsDataModel(setting: "Позвонить нам", settingImage: "phone-call@3x"),
+                                             SettingsDataModel(setting: "О проекте", settingImage: "info@3x"),
+                                             SettingsDataModel(setting: "Условия", settingImage: "agreement@3x")]
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

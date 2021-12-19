@@ -41,8 +41,6 @@ class MainMenuTableViewCell: UITableViewCell {
         return label
     }()
 
-
-    
     private let menuImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.init(named:"Image")

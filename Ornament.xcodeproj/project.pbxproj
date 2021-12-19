@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043F56D2276FB6C700F583A2 /* CheckUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56D1276FB6C700F583A2 /* CheckUpFirstViewController.swift */; };
+		043F56D4276FB8D000F583A2 /* CheckUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56D3276FB8D000F583A2 /* CheckUpView.swift */; };
+		043F56D6276FC33500F583A2 /* CheckUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F56D5276FC33500F583A2 /* CheckUpCollectionViewCell.swift */; };
 		045239BA27694C18000B8C63 /* SettingsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239B927694C18000B8C63 /* SettingsMenuView.swift */; };
 		045239BC276956EC000B8C63 /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239BB276956EC000B8C63 /* SettingsViewCell.swift */; };
 		045239C3276F2DA0000B8C63 /* CheckUpInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045239C2276F2DA0000B8C63 /* CheckUpInfoCell.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043F56D1276FB6C700F583A2 /* CheckUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpFirstViewController.swift; sourceTree = "<group>"; };
+		043F56D3276FB8D000F583A2 /* CheckUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpView.swift; sourceTree = "<group>"; };
+		043F56D5276FC33500F583A2 /* CheckUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpCollectionViewCell.swift; sourceTree = "<group>"; };
 		045239B927694C18000B8C63 /* SettingsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuView.swift; sourceTree = "<group>"; };
 		045239BB276956EC000B8C63 /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		045239C2276F2DA0000B8C63 /* CheckUpInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUpInfoCell.swift; sourceTree = "<group>"; };
@@ -106,6 +112,16 @@
 			path = CheckUpInfo;
 			sourceTree = "<group>";
 		};
+		045239CC276FA261000B8C63 /* AllCheckUps */ = {
+			isa = PBXGroup;
+			children = (
+				043F56D1276FB6C700F583A2 /* CheckUpFirstViewController.swift */,
+				043F56D3276FB8D000F583A2 /* CheckUpView.swift */,
+				043F56D5276FC33500F583A2 /* CheckUpCollectionViewCell.swift */,
+			);
+			path = AllCheckUps;
+			sourceTree = "<group>";
+		};
 		0474D4E32762246800C0A1B3 /* CellCheckUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +161,7 @@
 		04F0388D273C373B00E90CBC /* Ornament */ = {
 			isa = PBXGroup;
 			children = (
+				045239CC276FA261000B8C63 /* AllCheckUps */,
 				045239C1276F2D43000B8C63 /* CheckUpInfo */,
 				045239B827694BA0000B8C63 /* SettingsMenu */,
 				454851322767AF870034AE9B /* MainMenu */,
@@ -285,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F56D6276FC33500F583A2 /* CheckUpCollectionViewCell.swift in Sources */,
 				451AC8EF276286E4007D664D /* PersonDoctorUIView.swift in Sources */,
 				0474D4EA276257A800C0A1B3 /* AllCheckUpsViewController.swift in Sources */,
 				451AC8F1276286E4007D664D /* PersonDoctorUIViewController.swift in Sources */,
@@ -299,6 +317,7 @@
 				451AC8F6276286EB007D664D /* DoctorTypeTableViewCell.swift in Sources */,
 				45DFC5D3276629C10073E191 /* MainMenuView.swift in Sources */,
 				04F0388F273C373B00E90CBC /* AppDelegate.swift in Sources */,
+				043F56D2276FB6C700F583A2 /* CheckUpFirstViewController.swift in Sources */,
 				045239C7276F333A000B8C63 /* CheckUpInfoViewController.swift in Sources */,
 				454851342767AFD20034AE9B /* MainMenuTableViewCell.swift in Sources */,
 				451AC8F5276286EB007D664D /* ChooseDoctorTypeViewController.swift in Sources */,
@@ -309,6 +328,7 @@
 				454A7E26276284D5001440D8 /* InitViewController.swift in Sources */,
 				451AC8F7276286EB007D664D /* DoctorTypeView.swift in Sources */,
 				04F03891273C373B00E90CBC /* SceneDelegate.swift in Sources */,
+				043F56D4276FB8D000F583A2 /* CheckUpView.swift in Sources */,
 				451AC8FD276286F5007D664D /* SettingnsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

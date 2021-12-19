@@ -1,30 +1,30 @@
 //
-//  SettingsMenuView.swift
+//  CheckUpView.swift
 //  Ornament
 //
-//  Created by Anastasia on 15.12.2021.
+//  Created by Anastasia on 19.12.2021.
 //
 
 import UIKit
 
-class SettingsMenuView: UIView {
-    
+class CheckUpView: UIView {
+
     private let headerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Настройки"
         label.textColor = .black
-        label.font = label.font.withSize(40)
+        label.font = label.font.withSize(30)
         label.textAlignment = .left
+        label.text = "Выберете чекап"
+        label.numberOfLines = 0
         label.font = label.font.bold
         return label
     }()
     
-    let tableView = UITableView() // settings (О проекте, связаться с нами .. )
+    let collectionView = UICollectionView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
-        backgroundColor = .systemGray6
     }
     
     required init?(coder: NSCoder) {
@@ -33,24 +33,24 @@ class SettingsMenuView: UIView {
     
     private func addSubviews() {
         addSubview(headerLabel)
-        addSubview(tableView)
+        addSubview(collectionView)
         self.subviews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
-        updConstraint()
+        updConstr()
     }
     
-    func updConstraint(){
+    func updConstr() {
         [
             headerLabel.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
             headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             headerLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 148),
             
-            tableView.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
-            tableView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 10),
-            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            collectionView.leadingAnchor.constraint (equalTo: self.leadingAnchor, constant: 20),
+            collectionView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 10),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             
         ].forEach { $0.isActive = true }
          super.updateConstraints ()

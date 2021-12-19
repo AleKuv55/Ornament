@@ -137,9 +137,7 @@ class AllCheckUpsViewController: UIViewController {
 extension AllCheckUpsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewController = CheckUpInfoViewController(checkUp: checkUpList[indexPath.item])
-//        let viewController = CheckUpInfoViewController(checkUpList[indexPath.section]: CheckUpDataModel)
         self.navigationController?.pushViewController(viewController, animated: true)
         print("didSelectItemAt")
-        
     }
 }

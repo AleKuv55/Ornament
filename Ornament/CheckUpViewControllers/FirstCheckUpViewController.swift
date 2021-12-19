@@ -11,8 +11,6 @@ class FirstCheckUpViewController: UIViewController {
 
     @IBOutlet weak var allCheckUps: UIView!
     
-    @IBOutlet weak var headerFirstCheck: UILabel!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Чекапы"
