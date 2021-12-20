@@ -17,9 +17,9 @@ class SelectCheckUpViewController: UIViewController {
         return CheckUpTimeCollectionViewController(coder: coder, checkUpTime: ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00","18:00", "19:00", "20:00"])
     }
     
-    let time: CheckUpDataModel
+    let time: [String]
     
-    init?(coder: NSCoder, time: CheckUpDataModel) {
+    init?(coder: NSCoder, time: [String]) {
         self.time = time
         super.init(coder: coder)
     }
